@@ -1,15 +1,15 @@
-// import java.util.Scanner;
+import java.util.Scanner;
 
 public class Occurrences {
 
   public static void main(String[] args) {
     System.out.println("Lets find the total number in the array");
-    // try(Scanner input = new Scanner(System.in)){
-    // int taget
-    // }
-    int count = list(2);
-    System.out.println("total number of 5 is :"+ count);
-
+    try(Scanner input = new Scanner(System.in)){
+      System.out.print("enter the number that you want to count: ");
+    int target = input.nextInt();
+    int count = list(target);
+    System.out.println("total number of "+target+ " is :"+ count);
+    }
   }
 
   static int list(int target){
