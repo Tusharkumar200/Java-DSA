@@ -16,4 +16,10 @@ public class ArrayUtility {
       return num;
     }
   }
+  public static void displayArray(int[] numArray) {
+    for(int i=0;i< numArray.length;i++){
+      System.out.println(numArray[i] + " ");
+    }
+    System.out.println();
+  }
 }
