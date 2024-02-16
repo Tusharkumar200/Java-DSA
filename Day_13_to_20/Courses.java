@@ -4,10 +4,10 @@ class Courses{
   int enrollments;
 
   String[] enrolledStudents;
-  
+
   Courses(String courseName){
     this.courseName = courseName;
-    this.enrollment = 0;
+    this.enrollments = 0;
     this.enrolledStudents = new String[maxCapacity];
   }
 
