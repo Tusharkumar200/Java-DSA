@@ -6,12 +6,8 @@ public class odd_even {
       System.out.println("Enter the number: ");
       int num = input.nextInt();
   
-      if(num % 2 !=0){
-        System.out.println("odd number");
-      }
-      else{
-        System.out.println("Even number");
-      }
+      String result = num %2 ==0?"Even":"Odd";
+      System.out.println("Number is "+ result);
     }
 
   }
