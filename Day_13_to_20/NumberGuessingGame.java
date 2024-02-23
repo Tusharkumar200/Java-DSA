@@ -8,7 +8,7 @@ public class NumberGuessingGame {
   
           int computer = rand.nextInt(100);     
           int user;
-          int count=0;
+          // int count=0;
           int lifeLine = 5;
           String status = " victory ";
           System.out.println("Guess the number between 0 to 100 ");
@@ -23,7 +23,7 @@ public class NumberGuessingGame {
            else if(user > computer){
             System.out.println("Guess less then It ");
            }
-           count++;
+          //  count++;
            lifeLine--;
            if (lifeLine ==0) {
             System.out.println("Life Finish");
