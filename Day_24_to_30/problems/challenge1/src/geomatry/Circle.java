@@ -1,4 +1,4 @@
-package me.codexspot.geometry;
+package challenge1.src.geomatry;
 
 public class Circle {
   public double radius;

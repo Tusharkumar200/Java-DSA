@@ -1,4 +1,4 @@
-package me.codexspot.geometry;
+package challenge1.src.geomatry;
 
 public class Rectangle {
   public int length;
@@ -10,4 +10,4 @@ public class Rectangle {
     }
   }
   
-}
+
