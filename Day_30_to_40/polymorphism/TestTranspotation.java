@@ -8,6 +8,8 @@ public class TestTranspotation {
 
     // castTest(v);
     castTest(c);
+    c.start();
+    v.start();
   }
 
   private static void castTest(Vehicle veh){
@@ -17,4 +19,5 @@ public class TestTranspotation {
       cVehicle.start();
       // cVehicle.noOfDoors();
   }
+
 }
