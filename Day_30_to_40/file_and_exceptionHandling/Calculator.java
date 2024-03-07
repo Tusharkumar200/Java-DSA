@@ -7,7 +7,6 @@ public class  Calculator {
 
       try{
 
-      
       System.out.print("Enter first number");
       int num1 = input.nextInt();
       System.out.print("Enter second number");
