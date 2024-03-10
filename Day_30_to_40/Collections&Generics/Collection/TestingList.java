@@ -6,7 +6,7 @@ import java.util.List;
 public class TestingList {
   public static void main(String[] args) {
     
-    List <String>strList = new ArrayList<>();
+    List <String>strList = new ArrayList<>();  // compile time exucation
     // List strList = new ArrayList(); --> to store any type of data
 
     strList.add("Tushar ");
