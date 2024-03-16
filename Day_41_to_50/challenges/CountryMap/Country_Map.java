@@ -12,14 +12,15 @@ public class Country_Map {
     countryMap.put("SriLanka", "Columbo");
     countryMap.put("Bangladesh", "Dhaka");
 
-    Scanner input = new Scanner(System.in);
-    System.out.println("Enter The Country Name");
-    String country = input.next();
+    try (Scanner input = new Scanner(System.in)) {
+      System.out.println("Enter The Country Name");
+      String country = input.next();
 
-    if (countryMap.containsKey(country)) {
-      System.out.printf("Capital of %s is %s",country,countryMap.get(country));
-    }else{
-      System.out.println("Sorry we don't know the capital ");
+      if (countryMap.containsKey(country)) {
+        System.out.printf("Capital of %s is %s",country,countryMap.get(country));
+      }else{
+        System.out.println("Sorry we don't know the capital ");
+      }
     }
   }
 }
