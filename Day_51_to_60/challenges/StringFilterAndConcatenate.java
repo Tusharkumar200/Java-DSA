@@ -11,4 +11,5 @@ public class StringFilterAndConcatenate {
                             .reduce("",(a,b) -> a+" "+b);
     System.out.println(result);
   }
+  
 }
