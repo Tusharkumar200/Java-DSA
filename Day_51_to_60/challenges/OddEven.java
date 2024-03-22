@@ -8,7 +8,7 @@ public class OddEven {
     List <Integer> numbers = List.of(1,23,3,4,5,6,7,89,9,10);
 
      numbers.stream()
-          .filter(nums -> nums %2 ==1);
-          .for (num -> System.out.print(num));
+          .filter(nums -> nums %2 ==1)
+          .forEach(System.out::println);
   }
 }
