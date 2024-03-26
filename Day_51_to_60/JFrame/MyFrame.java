@@ -21,32 +21,32 @@ public class MyFrame extends TestingJframe {
   }
 
   private Frame getContentPane() {
-    // TODO Auto-generated method stub
+    
     throw new UnsupportedOperationException("Unimplemented method 'getContentPane'");
   }
 
   private void setIconImage(Image image) {
-    // TODO Auto-generated method stub
+    
     throw new UnsupportedOperationException("Unimplemented method 'setIconImage'");
   }
 
   private void setSize(int i, int j) {
-    // TODO Auto-generated method stub
+   
     throw new UnsupportedOperationException("Unimplemented method 'setSize'");
   }
 
   private void setDefaultCloseOperation(int exitOnClose) {
-    // TODO Auto-generated method stub
+    
     throw new UnsupportedOperationException("Unimplemented method 'setDefaultCloseOperation'");
   }
 
   private void setResizable(boolean b) {
-    // TODO Auto-generated method stub
+    
     throw new UnsupportedOperationException("Unimplemented method 'setResizable'");
   }
 
   private void setTitle(String string) {
-    // TODO Auto-generated method stub
+    
     throw new UnsupportedOperationException("Unimplemented method 'setTitle'");
   }
   
