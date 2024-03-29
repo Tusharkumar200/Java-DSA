@@ -17,7 +17,8 @@ public class _FlowLayout {
   JFrame frame = new JFrame();
   frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
   frame.setSize(500,500);
-  frame.setLayout(new _FlowLayout());
+  
+  frame.setLayout(new FlowLayout(FlowLayout.LEADING));
   
 
   frame.add(new JButton("1"));
