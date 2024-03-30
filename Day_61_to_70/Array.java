@@ -10,8 +10,10 @@ public class Array{
     items[3] = 5;
     items[4] = 25;
     
-
-    System.out.println(items[3]);
+    for (int i : items) {
+        
+      System.out.println(i);
+    }  
     
 
   }
