@@ -3,9 +3,9 @@ public class PassingArraysAsArgument {
   public static void update(int marks[]){
     System.out.println("new  marks");
        
-    for (int i : marks) {
-      marks[i] = marks[i] +1;
-      System.out.println(i);
+    for (int i = 0; i < marks.length; i++) {
+      marks[i] = marks[i] + 1;
+      System.out.println(marks[i]);
     }
   }
   public static void main(String[] args) {
