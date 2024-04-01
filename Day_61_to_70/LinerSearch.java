@@ -2,16 +2,23 @@ public class LinerSearch {
 
   public static int search(int numbers[] , int key){
     for (int i : numbers) {
-      if(i == key){
-        System.out.println("number found at "+ i);
+      if(numbers[i] == key){
+        return i;
       }
     }
-    return 0;
+    return -1;
   }
   public static void main(String[] args) {
     int[] numbers = {1,5,8,4,10,55,3,4,54,22};
     int key = 10;
 
-    search(numbers, key);
+    int index =  search(numbers, key);
+
+    if(index == -1){
+      System.out.println("key is not found");
+    }
+    else{
+      System.out.println("key is at index "+ index);
+    }
   }
 }
