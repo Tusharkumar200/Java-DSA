@@ -1,7 +1,7 @@
 public class subarraySum_1_PreFix {
   public static void maxSubarraySum(int number[]){
 
-    // Time - Complexity --> O(n)^3
+    // Time - Complexity --> O(n^2)
     
     int currSum=0;
     int maxSum=Integer.MIN_VALUE;
