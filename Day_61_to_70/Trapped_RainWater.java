@@ -11,13 +11,19 @@ class Trapped_RaingWater{
     // calculate right max boundary -array
     int rightMax[] = new int[n];
     rightMax[n-1] = height[n-1];
+
     for (int i = n-2; i >=0; i--) {
       rightMax[i]= Math.max(height[i],rightMax[i+1]);
     }
+    int trappedWater = 0;
     // loop
-    // waterLavel = min(leftMax boutnd, rightMax bound)
-    // trapped water = waterLevel - height[i]
-    return 0;
+    for(int i=0;i<n; i++){
+      // waterLavel = min(leftMax boutnd, rightMax bound)
+        int waterLavel = Math.min(leftMax[i], rightMax[i]);
+      // trapped water = waterLevel - height[i]
+      trappedWater += waterLavel - height[i];
+    }
+    return trappedWater;
   }
   public static void main(String[] args){
     int height[] = {4,2,0,6,3,2,5};
