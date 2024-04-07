@@ -27,6 +27,7 @@ class Trapped_RaingWater{
   }
   public static void main(String[] args){
     int height[] = {4,2,0,6,3,2,5};
-    TrappedRaingWater(height);
+    int result = TrappedRaingWater(height);
+    System.out.println(result);
   }
 }
