@@ -1,5 +1,7 @@
 class Trapped_RaingWater{
 
+// Time Complexity = O(n)
+
   public static int TrappedRaingWater(int height[]){
     int n = height.length;
     // calculate left max border -array
@@ -27,7 +29,6 @@ class Trapped_RaingWater{
   }
   public static void main(String[] args){
     int height[] = {4,2,0,6,3,2,5};
-    int result = TrappedRaingWater(height);
-    System.out.println(result);
+    System.out.println(" trapped water is : "+TrappedRaingWater(height));
   }
 }
