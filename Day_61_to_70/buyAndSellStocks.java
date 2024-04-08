@@ -18,6 +18,6 @@ public class buyAndSellStocks {
   public static void main(String[] args) {
     int prices[] = {7,1,5,3,6,4};
     int result = stocks(prices);
-    System.out.println(" stock price : "+result);
+    System.out.println(" profit stock price : "+result);
   }
 }
