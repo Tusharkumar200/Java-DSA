@@ -13,6 +13,7 @@ Output: false
 class Least_twice_In_Array{
 
   public static boolean testing_Twice(int num[]){
+    // this approched take time-complexity of --> O(n^2)
     boolean flag = false;
     for (int i=0; i<num.length -1;i++) {
       for (int j =i+1; j < num.length-1; j++) {
@@ -24,6 +25,10 @@ class Least_twice_In_Array{
     }
     return flag;
 
+  }
+
+  public static void approch2(int num[]){
+    
   }
   public static void main(String [] args){
     int num[] = {1,2,3,4,5,1,1};
