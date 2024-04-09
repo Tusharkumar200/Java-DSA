@@ -10,6 +10,8 @@ Output: false
 
 */
 
+import java.util.HashSet;
+
 class Least_twice_In_Array{
 
   public static boolean testing_Twice(int num[]){
@@ -27,14 +29,27 @@ class Least_twice_In_Array{
 
   }
 
-  public static void approach2(int num[]){
-
+  public static boolean approach2(int num[]){
+      // this approach take time-complexity of --> O(n)
+      HashSet<Integer> set = new HashSet<>();
+      for(int i=0; i<num.length -1;i++){
+        if(set.contains(num[i])){
+          return true;
+        }
+        else{
+          set.add(num[i]);
+        }
+      }
+      
+      return false;
   }
   public static void main(String [] args){
-    int num[] = {1,2,3,4,5,1,1};
+    int num[] = {1,2,3,4,5,1,1,7,5,8,4,2,3};
         
     boolean r= testing_Twice(num);
+    boolean a2= approach2(num);
     System.out.println(r);
+    System.out.println(a2);
 
   }
 }
