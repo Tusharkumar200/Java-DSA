@@ -16,10 +16,19 @@ Output: 4
 
 public class Question_2 {
 
-  public static int  rotated(int nums[], int target){
-   
-    return 0;
+  public static int  search(int nums[], int target){
+
+    int min = minSearch(nums);
+    if(nums[min] <= target && target <= nums[nums.length-1]){
+      return search(nums,min,nums.length-1,target);
+    }
+   else{
+    return search(nums,0,min,target);
+   }
+    
   }
+  // binary Search to find target in left to right boundary
+
 
   // smallest element index
   public int minSearch(int[] nums){
@@ -41,7 +50,7 @@ public class Question_2 {
     int nums[] = {0,1,2,4,5,6,7}; 
     int target = 3;
 
-    int r= rotated(nums, target);
+    int r= search (nums, target);
     System.out.println(r);
   }
 }
