@@ -28,10 +28,30 @@ public class Question_2 {
     
   }
   // binary Search to find target in left to right boundary
+  public static int search(int[] nums,int left,int right,int target){
+    
+    int l = left;
+    int r = right;
+    System.out.println(l+" "+r);
+    while (l <= r) {
+      int mid = l + (r-l)/2;
+      if(nums[mid] == target){
+        return mid;
+      }
+      else if(nums[mid] > target){
+        r = mid -1;
+      }
+      else{
+        l= mid+1;
+      }
+    }
 
+    return -1;
+
+      }
 
   // smallest element index
-  public int minSearch(int[] nums){
+  public static int minSearch(int[] nums){
     int left =0;
     int right = nums.length-1;
 
