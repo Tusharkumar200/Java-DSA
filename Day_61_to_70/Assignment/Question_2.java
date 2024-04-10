@@ -32,7 +32,7 @@ public class Question_2 {
     
     int l = left;
     int r = right;
-    System.out.println(l+" "+r);
+    
     while (l <= r) {
       int mid = l + (r-l)/2;
       if(nums[mid] == target){
@@ -54,7 +54,7 @@ public class Question_2 {
   public static int minSearch(int[] nums){
     int left =0;
     int right = nums.length-1;
-
+    
     while(left < right){
       int mid = left + (right - left)/2;
       if(mid > 0 && nums[mid-1] >nums[mid]){
@@ -63,12 +63,15 @@ public class Question_2 {
       else if(nums[left] <= nums[mid] && nums[mid] > nums[right]){
         left = mid+1;
       }
+      else{
+        right = mid-1;
+      }
     }
     return left;
   }
   public static void main(String[] args) {
-    int nums[] = {0,1,2,4,5,6,7}; 
-    int target = 3;
+    int nums[] = {4, 5, 6, 7, 0, 1, 2}; 
+    int target = 0;
 
     int r= search (nums, target);
     System.out.println(r);
