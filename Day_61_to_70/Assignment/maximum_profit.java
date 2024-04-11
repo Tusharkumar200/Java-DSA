@@ -1,5 +1,5 @@
 public class maximum_profit {
-  
+  // Time complexity --> O(n)
   public static int stock(int[] prices){
    int buyPrice = Integer.MAX_VALUE;
    int maxProfit = 0;
