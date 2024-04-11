@@ -4,7 +4,7 @@ public class maximum_profit {
    int buyPrice = Integer.MAX_VALUE;
    int maxProfit = 0;
    
-   for (int i = 0; i < prices.length; i++) {
+   for (int i = 0; i < prices.length-1; i++) {
       if(buyPrice < prices[i]){
         int Profit = prices[i];
         maxProfit = Math.max(maxProfit,Profit);
@@ -17,7 +17,8 @@ public class maximum_profit {
    return maxProfit;
   }
   public static void main(String[] args) {
-    int prices[] = {7, 1, 5, 3, 6, 4};
-    stock(prices);
+    int prices[] = {7, 6, 4, 3, 1};
+    int result = stock(prices);
+    System.out.println(result);
   }
 }
