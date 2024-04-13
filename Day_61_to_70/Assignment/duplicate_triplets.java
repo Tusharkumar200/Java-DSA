@@ -18,7 +18,7 @@ public class duplicate_triplets {
             triplet.add(nums[i]);
             triplet.add(nums[j]);
             triplet.add(nums[k]);
-
+//  creating error
             Collections.sort(triplet);
             result.add(triplet);
           }
