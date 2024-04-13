@@ -1,22 +1,36 @@
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.LinkedHashSet;
+import java.util.List;
+
 public class duplicate_triplets {
   
-  public static int duplicate(int[] nums){
+  public static List <List<Integer>> threeSum(int[] nums){
+    List <List<Integer>> result = new ArrayList <List<Integer>>();
+
+
     for (int i = 0; i < nums.length; i++) {
-      for (int j = 0; j < nums.length; j++) {
-        for (int k = 0; k < nums.length; k++) {
+      for (int j =i+1; j < nums.length; j++) {
+        for (int k = j+i; k < nums.length; k++) {
           
-          if(i != j && i != k && j != k && nums[i] + nums[j] + nums[k] == 0){
-            mums[j] nums[k]]
+          if( nums[i] + nums[j] + nums[k] ==0){
+            List <Integer> triplet = new ArrayList <Integer>();
+            triplet.add(nums[i]);
+            triplet.add(nums[j]);
+            triplet.add(nums[k]);
+
+            Collections.sort(triplet);
+            result.add(triplet);
           }
         }
       }
     }
-    return 0;
+    result = new ArrayList<List<Integer>> ();
+    return result;
   }
   public static void main(String[] args) {
     int []nums = {-1, 0, 1, 2, -1, -4};
-    int result = duplicate(nums);
-    System.out.println(result);
+    System.out.println(threeSum(nums));
 
   }
 }
