@@ -1,5 +1,5 @@
 public class print_duplicate_element{
-
+// practice for exam
   public static void  duplicate(int[] nums){
     
     for (int i=0 ;i<= nums.length-1;i++) {
