@@ -15,7 +15,17 @@ public class selectionSort {
       nums[i] = temp;
     }
   }
+
+  public static void printArray(int [] nums){
+    for (int i = 0; i < nums.length-1; i++) {
+      System.out.println(nums[i]);
+    }
+  }
   
   public static void main(String[] args) {
-    int nums[] = {5,1,4,8,6,0,2};
+    int nums[] = {5,1,4,8,6,10,2};
+    Selection(nums);
+    printArray(nums);
+
+  }
 }
