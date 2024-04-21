@@ -1,11 +1,13 @@
 public class selectionSort {
   
+  // Time complexity --> O(n^2)
+
   public static void Selection(int[] nums){
     for (int i = 0; i < nums.length; i++) {
       int minPos = i;
       for (int j = i+1; j < nums.length-1; j++) {
         
-        if(nums[minPos] >nums[j]){
+        if(nums[minPos] > nums[j]){
           minPos = j;
         }
       }
