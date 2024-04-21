@@ -7,7 +7,7 @@ public class selectionSort {
       int minPos = i;
       for (int j = i+1; j < nums.length-1; j++) {
         
-        if(nums[minPos] > nums[j]){
+        if(nums[minPos] > nums[j]){ // change the < sign to print in dassending order
           minPos = j;
         }
       }
