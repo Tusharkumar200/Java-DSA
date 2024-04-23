@@ -23,6 +23,9 @@ public class preDefineSort{
     System.out.println("preDefineSort algo");
     int nums[] = {5,1,4,8,6,0,2};
     Arrays.sort(nums);
+    Arrays.sort(nums,0,3);
+    // Arrays.sort(nums,Collections.reverseOrder());
+
     printArray(nums);
     
   }
