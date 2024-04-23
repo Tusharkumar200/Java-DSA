@@ -21,5 +21,9 @@ public class preDefineSort{
   }
   public static void main(String[] args) {
     System.out.println("preDefineSort algo");
+    int nums[] = {5,1,4,8,6,0,2};
+    Arrays.sort(nums);
+    printArray(nums);
+    
   }
 }
