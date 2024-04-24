@@ -46,6 +46,28 @@ public static void insertionSort(int[] nums){
   }
 }
 
+// countingSort
+
+public static void countingSort(int[] nums){
+  int largest = Integer.MIN_VALUE;
+  for (int i = 0; i < nums.length; i++) {
+      largest = Math.max(largest,nums[i]);
+  }
+
+  int count[] = new int[largest+1];
+    for (int i = 0; i < nums.length; i++) {
+      count[nums[i]]++;
+    }
+
+    int j=0;
+    for (int i = 0; i < count.length; i++) {
+      while(count[i] >0){
+        nums[j] =i;
+        j++;
+        count[i]--;
+      }
+    }
+}
   public static void printArray(int []nums){
     for (int index = 0; index < nums.length; index++) {
         System.out.println(nums[index]);
@@ -55,7 +77,8 @@ public static void insertionSort(int[] nums){
     int []nums ={50,40,60,10,32,22,80};
     // bubbleSort(nums);
     // selectionSort(nums);
-    insertionSort(nums);
+    // insertionSort(nums);
+    countingSort(nums);
     printArray(nums);
   }
 }
