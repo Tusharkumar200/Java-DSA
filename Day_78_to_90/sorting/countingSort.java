@@ -21,8 +21,15 @@ public class countingSort {
       }
     }
   }
+
+  public static void printArray(int [] nums){
+    for (int i = 0; i < nums.length; i++) {
+      System.out.print(" "+nums[i]);
+    }
+  }
   public static void main(String[] args) {
-    int [] nums={1,5,2,4,7,8,3};
+    int [] nums={1,5,2,4,7,8,1,1,2,3,3};
     counting(nums);
+    printArray(nums);
   }
 }
