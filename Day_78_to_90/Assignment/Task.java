@@ -32,6 +32,20 @@ public class Task {
         nums[i] = temp;
     }
   }
+
+  // Insertion Sort
+public static void insertionSort(int[] nums){
+  for (int i =1; i < nums.length; i++) {
+    int curr = nums[i];
+    int pre = i-1;
+    while(pre>=0 && nums[pre] > curr){
+      nums[pre+1] = nums[pre];
+      pre--;
+    }
+    nums[pre+1] = curr;
+  }
+}
+
   public static void printArray(int []nums){
     for (int index = 0; index < nums.length; index++) {
         System.out.println(nums[index]);
@@ -40,7 +54,8 @@ public class Task {
   public static void main(String[] args) {
     int []nums ={50,40,60,10,32,22,80};
     // bubbleSort(nums);
-    selectionSort(nums);
+    // selectionSort(nums);
+    insertionSort(nums);
     printArray(nums);
   }
 }
