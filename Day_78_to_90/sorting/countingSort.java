@@ -10,8 +10,19 @@ public class countingSort {
     for (int i = 0; i < nums.length; i++) {
       count[nums[i]]++;
     }
+
+    // sorting
+    int j=0;
+    for (int i = 0; i < count.length; i++) {
+      while(count[i] >0){
+        nums[j] =i;
+        j++;
+        count[i]--;
+      }
+    }
   }
   public static void main(String[] args) {
     int [] nums={1,5,2,4,7,8,3};
+    counting(nums);
   }
 }
