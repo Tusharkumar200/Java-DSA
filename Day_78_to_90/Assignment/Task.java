@@ -60,7 +60,7 @@ public static void countingSort(int[] nums){
     }
 
     int j=0;
-    for (int i = 0; i < count.length; i++) {
+    for (int i = count.length-1; i>=0; i--) {
       while(count[i] >0){
         nums[j] =i;
         j++;
@@ -76,9 +76,9 @@ public static void countingSort(int[] nums){
   public static void main(String[] args) {
     int []nums ={50,40,60,10,32,22,80};
     // bubbleSort(nums);
-    selectionSort(nums);
+    // selectionSort(nums);
     // insertionSort(nums);
-    // countingSort(nums);
+    countingSort(nums);
     printArray(nums);
   }
 }
