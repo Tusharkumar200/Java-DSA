@@ -27,9 +27,9 @@ public class Task {
           minPosition = j;
         }
       }
-        int temp = nums[minPosition];
-        nums[minPosition] = nums[i];
-        nums[i] = temp;
+        int temp = nums[i];
+        nums[i] = nums[minPosition];
+        nums[minPosition] = temp;
     }
   }
 
@@ -76,9 +76,9 @@ public static void countingSort(int[] nums){
   public static void main(String[] args) {
     int []nums ={50,40,60,10,32,22,80};
     // bubbleSort(nums);
-    // selectionSort(nums);
+    selectionSort(nums);
     // insertionSort(nums);
-    countingSort(nums);
+    // countingSort(nums);
     printArray(nums);
   }
 }
