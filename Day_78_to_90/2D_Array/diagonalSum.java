@@ -1,6 +1,7 @@
 public class diagonalSum {
   public static int  diagonal_Sum(int [][] matrix){
     int sum = 0;
+    /*
     for (int i = 0; i < matrix.length; i++) {
         for (int j = 0; j < matrix[0].length; j++) {
           
@@ -12,6 +13,17 @@ public class diagonalSum {
           }
         }
 
+    }
+    */
+
+
+    
+    for (int i = 0; i < matrix.length; i++) {
+      sum += matrix[i][i];
+
+      if(i != matrix.length-1-i ){
+        sum+= matrix[i][matrix.length-i-1];
+      }
     }
     return sum;
   }
