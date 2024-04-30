@@ -5,7 +5,7 @@ public class diagonalSum {
         for (int j = 0; j < matrix[0].length; j++) {
           
           if(i ==j){
-            sum=+ matrix[i][j];
+            sum+= matrix[i][j];
           }
           else if(i+j == matrix.length -1){
             sum +=matrix[i][j];
