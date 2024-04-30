@@ -2,6 +2,7 @@ public class diagonalSum {
   public static int  diagonal_Sum(int [][] matrix){
     int sum = 0;
     /*
+    // Brute-force (O(n^2))
     for (int i = 0; i < matrix.length; i++) {
         for (int j = 0; j < matrix[0].length; j++) {
           
@@ -17,7 +18,7 @@ public class diagonalSum {
     */
 
 
-    
+    // Optimize solution (O(n))
     for (int i = 0; i < matrix.length; i++) {
       sum += matrix[i][i];
 
