@@ -1,6 +1,22 @@
 public class Searching_in_2D_Array {
-  public static void search(int[][] matrix,int key){
+  public static boolean search(int[][] matrix,int key){
+      int row = 0, col = matrix.length-1;
 
+      while(row < matrix.length && col >= 0){
+
+        if(matrix[row][col] == key){
+          System.out.println("found key at ("+row + ","+col +")");
+          return true;
+        }
+        else if(key < matrix[row][col]){
+          col--;
+        }
+        else{
+          row++;
+        }
+      }
+      System.out.println("key not found! ");
+      return false;
   }
   public static void main(String[] args) {
     int matrix[][] = {
