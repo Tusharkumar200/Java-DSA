@@ -5,11 +5,10 @@ class sum_of_the_numbers {
   public static int sumOfRow(int[][] array){
     
     int sum=0;
-    for (int row = 0; row < array.length; row++) {
+    for (int row = 1; row < array.length-1; row++) {
       for (int col = 0; col < array[0].length; col++) {
-        if(row ==2){
-          sum += row;
-        }
+        System.out.print(" \n"+array[row][col]);
+        sum += array[row][col];
       }
     }
     return sum;
@@ -21,6 +20,6 @@ class sum_of_the_numbers {
                     {2,2,3} };
 
     int result = sumOfRow(array);
-    System.out.println(result);
+    System.out.println(" sum of row : "+result);
   }
 }
