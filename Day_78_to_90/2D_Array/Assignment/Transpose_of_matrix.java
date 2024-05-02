@@ -15,11 +15,9 @@ public class Transpose_of_matrix {
 
     int row = 2;
     int col = 3;
-    int[][] matrix = {{2,4,6},
-                      {5,8,10}};
+    int[][] matrix = {{2,4,6},{5,8,10}};
 
     
-
     int [][] transpose = new int[col][row];
 
     for (int i = 0; i < row; i++) {
