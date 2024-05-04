@@ -1,4 +1,4 @@
-public class palindrome {
+public class _05_palindrome {
 
   // T.c => O(n)
   public static boolean isPalindrom(String str){
