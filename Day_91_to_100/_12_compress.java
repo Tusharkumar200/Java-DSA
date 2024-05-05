@@ -1,6 +1,6 @@
 public class _12_compress {
   // example --> aaabbc -->a3b2c;
-
+//  T.C ---> O(n)
   public static String compress(String str){
     String newStr = "";
    
