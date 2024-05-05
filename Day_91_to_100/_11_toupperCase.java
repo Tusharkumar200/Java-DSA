@@ -1,6 +1,8 @@
 public class _11_toupperCase {
 
   public static String upper(String str){
+
+    // doing first word capital
       StringBuilder sb = new StringBuilder("");
       char ch = Character.toUpperCase(str.charAt(0));
       sb.append(ch);
