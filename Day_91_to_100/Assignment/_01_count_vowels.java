@@ -5,15 +5,15 @@ import java.util.Scanner;
 public class _01_count_vowels {
 
   public static void countVowel(String str){
-    int countVowel = 0;
-    String vowel []={"a","e","i","o","u"};
-    for (int i = 0; i < vowel.length; i++) {
-      System.out.println(vowel[i]);
-      if(vowel[i].equals(str.charAt(i))){
-        countVowel++;
-      }
+    int countVowels = 0;
+    for (int i=0;i<str.length();i++ ) {
+        char ch = str.charAt(i);
+        if(ch=='a' ||ch=='e' ||ch=='i' ||ch=='o' ||ch=='u'){
+          countVowels++;
+        }
     }
-    System.out.println(countVowel);
+    System.out.println("Total vowel : "+countVowels);
+
   }
   public static void main(String[] args) {
     System.out.println("Enter the sentence");
