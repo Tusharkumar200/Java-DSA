@@ -55,6 +55,9 @@ public class Bits {
   }
   }
   public static void main(String[] args) {
+    getBit();
+    setBit();
+    clearBits();
     updateBit();
     
   }
