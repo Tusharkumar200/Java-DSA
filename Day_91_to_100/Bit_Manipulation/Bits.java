@@ -5,7 +5,7 @@ public class Bits {
 
     // get bit
     int n=5;
-    int pos = 3;
+    int pos = 1;
     int bitMask = 1<<pos;
 
     if((bitMask & n)==0){
@@ -14,5 +14,10 @@ public class Bits {
     else{
       System.out.println("bit was not zero");
     }
+
+    // Set Bit
+    
+    int newNumber = bitMask | n;
+    System.out.println("set bit: "+newNumber);
   }
 }
