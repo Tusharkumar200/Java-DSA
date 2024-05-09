@@ -18,5 +18,6 @@ public class _88_Merge_Sort_Array {
     int num1[]={1,2,3,0,0,0};
     int num2[] = {2,5,6};
     merge(num1,m, num2,n);
+    System.out.println(Arrays.toString(num1));
   }
 }
