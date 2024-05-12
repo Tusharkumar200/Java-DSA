@@ -33,6 +33,16 @@ public class creatingLinkedList {
     
   }
 
+  public int sum(){
+    Node current = head;
+    int sum =0;
+    while (current != null) {
+      sum+= current.data;
+      current = current.next;
+    }
+    return sum;
+  }
+
   public String toString(){
     Node current = head;
     StringBuilder result = new StringBuilder();

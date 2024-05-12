@@ -10,7 +10,7 @@ public class Main {
     list.insert(50);
     list.insert(60);
 
-    System.out.println(list);
+    System.out.println(list.sum());
 
   }
 }
