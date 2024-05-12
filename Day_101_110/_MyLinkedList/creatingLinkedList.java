@@ -12,26 +12,41 @@ class Node{
 public class creatingLinkedList {
 
   private Node head;
+  private Node tail;
 
   public creatingLinkedList(){
     head = null;
+    tail = null;
   }
   
   public void insert(int value){
     Node node = new Node(value);
 
     if(head == null){
-      head = node;
+      head =tail = node;
     }
     else{
-        Node current = head;
+        tail.next = node;
+        tail = node;
 
-        while(current.next != null){
-          current = current.next;
-        }
-        current.next = node;
     }
     
+  }
+
+  public String toString(){
+    Node current = head;
+    StringBuilder result = new StringBuilder();
+
+    while(current != null){
+      result.append(current.data);
+      if(current.next != null){
+        result.append("--> ");
+      }
+      
+      current = current.next;
+    }
+
+    return result.toString();
   }
   
 }
