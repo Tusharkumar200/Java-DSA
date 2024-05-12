@@ -1,6 +1,7 @@
 package _MyLinkedList;
 
 public class Main {
+  
   public static void main(String[] args) {
     creatingLinkedList  list = new creatingLinkedList();
     list.insert(10);
@@ -9,8 +10,16 @@ public class Main {
     list.insert(40);
     list.insert(50);
     list.insert(60);
+    
 
+    list.insertFirst(5);
+    list.insertFirst(2);
+    
+    
+    System.out.println(list);
     System.out.println(list.sum());
+    System.out.println(list.isEmpty());
+    System.out.println(list.indexOf(30));
 
   }
 }

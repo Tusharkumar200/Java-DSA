@@ -22,7 +22,7 @@ public class creatingLinkedList {
   public void insert(int value){
     Node node = new Node(value);
 
-    if(head == null){
+    if(isEmpty()){
       head =tail = node;
     }
     else{
@@ -33,6 +33,20 @@ public class creatingLinkedList {
     
   }
 
+  public void insertFirst(int value){
+    Node node = new Node(value);
+    if(isEmpty()){
+        insert(value);
+        return;
+    }
+    node.next = head;
+    head = node;
+  }
+
+  public boolean isEmpty(){
+    return head == null & tail == null;
+  }
+
   public int sum(){
     Node current = head;
     int sum =0;
@@ -41,6 +55,18 @@ public class creatingLinkedList {
       current = current.next;
     }
     return sum;
+  }
+
+  public int indexOf(int value){
+    Node current = head;
+    int index =0;
+    while(current != null){
+      if(current.data == value) return index;
+      index++;
+      current = current.next;
+
+    }
+    return -1;
   }
 
   public String toString(){
