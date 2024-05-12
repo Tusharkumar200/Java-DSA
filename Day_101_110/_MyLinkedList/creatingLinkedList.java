@@ -76,7 +76,7 @@ public class creatingLinkedList {
     while(current != null){
       result.append(current.data);
       if(current.next != null){
-        result.append("--> ");
+        result.append(" , ");
       }
       
       current = current.next;
