@@ -44,7 +44,19 @@ public class creatingLinkedList {
   }
 
   public void insertAt(int index, int value){
+    if(isEmpty()) throw new IllegalArgumentException();
+
     Node node = new Node(value);
+    Node current = head;
+    Node prev = null;
+
+    while(index > 0 && current !=null){
+      prev = current;
+      current = current.next;
+      index--;
+    }
+    prev.next = node;
+    node.next = current;
   }
 
   public boolean isEmpty(){
