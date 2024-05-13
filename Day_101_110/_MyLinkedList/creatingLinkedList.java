@@ -43,6 +43,10 @@ public class creatingLinkedList {
     head = node;
   }
 
+  public void insertAt(int index, int value){
+    Node node = new Node(value);
+  }
+
   public boolean isEmpty(){
     return head == null & tail == null;
   }
