@@ -72,6 +72,14 @@ public class creatingLinkedList {
     }
     return sum;
   }
+
+  public void removeStart(){
+    if(isEmpty()) return;
+    Node temp = head;
+    head = head.next;
+    temp.next = null;
+
+  }
   public void reverse(){
 
     if(head == null || head.next ==null) return;

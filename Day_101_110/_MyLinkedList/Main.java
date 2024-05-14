@@ -12,12 +12,16 @@ public class Main {
     list.insert(60);
     
 // leetcode --> Qno.206
+    list.removeStart();
+    list.removeStart();
+    list.removeStart();
+    System.out.println(list);
     list.reverse();
     // list.insertFirst(5);
     // list.insertFirst(2);
     // list.insertAt(2,35);
-    
     System.out.println(list);
+    
     
     // System.out.println(list.sum());
     // System.out.println(list.isEmpty());
