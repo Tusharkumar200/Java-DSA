@@ -72,6 +72,24 @@ public class creatingLinkedList {
     }
     return sum;
   }
+  public void reverse(){
+
+    if(head == null || head.next ==null) return;
+    Node prev = null;
+    Node current = head;
+    Node next = head.next;
+
+    while (next != null) {
+      current.next = prev;
+      prev = current;
+      current = next;
+      next = next.next;
+
+     
+    }
+    current.next = prev;
+    head = current;
+  }
 
   public int indexOf(int value){
     Node current = head;

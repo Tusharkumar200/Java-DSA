@@ -11,17 +11,17 @@ public class Main {
     list.insert(50);
     list.insert(60);
     
-
-    list.insertFirst(5);
-    list.insertFirst(2);
-    list.insertAt(2,35);
-    
+// leetcode --> Qno.206
+    list.reverse();
+    // list.insertFirst(5);
+    // list.insertFirst(2);
+    // list.insertAt(2,35);
     
     System.out.println(list);
     
-    System.out.println(list.sum());
-    System.out.println(list.isEmpty());
-    System.out.println(list.indexOf(30));
+    // System.out.println(list.sum());
+    // System.out.println(list.isEmpty());
+    // System.out.println(list.indexOf(30));
 
   }
 }
