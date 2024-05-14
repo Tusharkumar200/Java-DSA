@@ -11,11 +11,11 @@ public class Main {
     list.insert(50);
     list.insert(60);
     
-// leetcode --> Qno.206
     list.removeStart();
     list.removeStart();
     list.removeStart();
     System.out.println(list);
+    // leetcode --> Qno.206
     list.reverse();
     // list.insertFirst(5);
     // list.insertFirst(2);
