@@ -80,6 +80,19 @@ public class creatingLinkedList {
     temp.next = null;
 
   }
+
+  public void removeEnd(){
+    if(isEmpty()) return;
+    if(head == tail){
+      head = tail = null;
+    }
+    Node current = head;
+    while(current.next != tail){
+      current = current.next;
+    }
+    current.next = null;
+    tail = current;
+  }
   public void reverse(){
 
     if(head == null || head.next ==null) return;

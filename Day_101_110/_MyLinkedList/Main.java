@@ -11,9 +11,9 @@ public class Main {
     list.insert(50);
     list.insert(60);
     
-    list.removeStart();
-    list.removeStart();
-    list.removeStart();
+    
+    // list.removeStart();
+    list.removeEnd();
     System.out.println(list);
     // leetcode --> Qno.206
     list.reverse();
