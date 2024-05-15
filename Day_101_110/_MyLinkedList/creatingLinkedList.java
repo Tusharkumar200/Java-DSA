@@ -95,6 +95,11 @@ public class creatingLinkedList {
   }
 
   public void removeNthFromEnd(int n){
+    if(isEmpty()) return;
+    if(head.next == null){
+      head = null;
+      return;
+    }
     int totalNodes =0;
     Node current = head;
 
@@ -103,6 +108,7 @@ public class creatingLinkedList {
       current = current.next;
 
     }
+    
 
     int indexFormFront = totalNodes -n+1;
     Node prev = null;
@@ -112,6 +118,12 @@ public class creatingLinkedList {
       prev = current;
       current = current.next;
       indexFormFront --;
+    }
+
+    if(prev == null){
+      head = current.next;
+      current.next = null;
+      
     }
 
     prev.next = current.next;
