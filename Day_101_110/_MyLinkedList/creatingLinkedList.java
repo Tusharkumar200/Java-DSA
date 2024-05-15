@@ -94,6 +94,29 @@ public class creatingLinkedList {
     tail = current;
   }
 
+  public void removeNthFromEndFast(int n){
+    if(isEmpty()) return;
+    if(head.next == null){
+      head = null;
+      return;
+    }
+    Node fast = head;
+    Node current = head;
+    Node prev = null;
+
+    while(n > 1 && fast !=null){
+      fast = fast.next;
+      n--;
+    }
+    while(fast.next != null){
+        prev = current;
+        current = current.next;
+        fast = fast.next;
+    }
+
+    prev.next = current.next;
+    current.next = null;
+  }
   public void removeNthFromEnd(int n){
     if(isEmpty()) return;
     if(head.next == null){
