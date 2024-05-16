@@ -12,8 +12,8 @@ public class Main {
     list.insert(60);
     
 
+    list.reverseRec();
     list.printRec();
-    
     list.removeNthFromEndFast(4);
     list.removeNthFromEnd(2);
     // list.removeStart();

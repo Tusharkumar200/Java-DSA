@@ -184,6 +184,22 @@ public class creatingLinkedList {
     return -1;
   }
 
+  public Node reverseRec(Node head){
+    
+    if(head == null || head.next == null) return head;
+
+    Node rest = reverseRec(head.next);
+
+    Node next = head.next;
+    next.next = head;
+    head.next = null;
+    return rest;
+    
+  }
+  public void reverseRec(){
+    head = reverseRec(head);
+  }
+
   public void printRec(Node head){
     
     if(head ==null) return;
