@@ -184,6 +184,16 @@ public class creatingLinkedList {
     return -1;
   }
 
+  public void printRec(Node head){
+    
+    if(head ==null) return;
+    System.out.println(head.data+"-->");
+    printRec(head.next);
+  }
+  public void printRec(){
+    printRec(head);
+  }
+
   public String toString(){
     Node current = head;
     StringBuilder result = new StringBuilder();
