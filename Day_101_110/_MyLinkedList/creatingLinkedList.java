@@ -187,7 +187,7 @@ public class creatingLinkedList {
   public void printRec(Node head){
     
     if(head ==null) return;
-    System.out.println(head.data+"-->");
+    System.out.print(head.data+"-->");
     printRec(head.next);
   }
   public void printRec(){
