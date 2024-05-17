@@ -222,6 +222,9 @@ public class creatingLinkedList {
 
     return secondOne;
   }
+  public void swapPair(){
+    head = swapPair(head);
+  }
 
   public String toString(){
     Node current = head;

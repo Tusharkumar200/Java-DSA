@@ -10,9 +10,10 @@ public class Main {
     list.insert(40);
     list.insert(50);
     list.insert(60);
+    list.insert(70);
     
 
-    list.swapPair(2);
+    list.swapPair();
     System.out.println(list);
 
     list.reverseRec();
