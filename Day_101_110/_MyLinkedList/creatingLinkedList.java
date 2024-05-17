@@ -211,7 +211,16 @@ public class creatingLinkedList {
   }
 
   public Node swapPair(Node head){
+
+    if(head == null || head.next == null) return head;
+
+    Node restOfTheNode = swapPair(head.next.next);
     
+    Node secondOne = head.next;
+    secondOne.next = head;
+    head.next = restOfTheNode;
+
+    return secondOne;
   }
 
   public String toString(){
