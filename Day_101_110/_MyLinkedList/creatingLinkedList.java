@@ -210,6 +210,10 @@ public class creatingLinkedList {
     printRec(head);
   }
 
+  public Node swapPair(Node head){
+    
+  }
+
   public String toString(){
     Node current = head;
     StringBuilder result = new StringBuilder();
