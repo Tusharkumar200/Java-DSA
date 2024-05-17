@@ -12,6 +12,9 @@ public class Main {
     list.insert(60);
     
 
+    list.swapPair(2);
+    System.out.println(list);
+
     list.reverseRec();
     list.printRec();
     list.removeNthFromEndFast(4);
