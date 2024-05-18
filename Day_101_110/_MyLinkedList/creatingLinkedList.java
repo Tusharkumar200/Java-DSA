@@ -185,7 +185,12 @@ public class creatingLinkedList {
   }
 
   public Node reverseinK(Node head , Node k){
-    
+    if(head == null || head.next == null) return head;
+
+    Node prev = null;
+    Node current = null;
+    Node next = null;
+    int count = 0;
   }
 
   public Node reverseRec(Node head){
