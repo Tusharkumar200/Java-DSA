@@ -13,8 +13,9 @@ public class Main {
     list.insert(70);
     
 
-    list.swapPair();
+    list.reverseinK(4);
     System.out.println(list);
+    list.swapPair();
 
     list.reverseRec();
     list.printRec();

@@ -204,10 +204,11 @@ public class creatingLinkedList {
     head.next = restOfNode;
     return prev;
   }
-  public void reverseinK(){
-    reverseinK(head,k);
+  public void reverseinK(int k){
     
+     reverseinK(head,k);
   }
+
 
   public Node reverseRec(Node head){
     
