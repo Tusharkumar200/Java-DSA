@@ -267,9 +267,9 @@ public class creatingLinkedList {
     }
     return false;
   }
-  public boolean hasCycle(){
-    head = hasCycle(head);
-  }
+  public void hasCycle(){
+       hasCycle(head);
+  }  
 
   public String toString(){
     Node current = head;
