@@ -286,8 +286,10 @@ public class creatingLinkedList {
 
  return head.next;
 }
-    
+public void middleNode(){
+  middleNode(head);
 }
+
 
   public String toString(){
     Node current = head;
