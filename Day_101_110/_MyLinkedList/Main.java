@@ -12,6 +12,9 @@ public class Main {
     list.insert(60);
     list.insert(70);
     
+
+    list.middleNode();
+    
     System.out.println(list);
       list.hasCycle();
     // list.reverseinK(4);
