@@ -252,6 +252,25 @@ public class creatingLinkedList {
     head = swapPair(head);
   }
 
+  public boolean hasCycle(Node head){
+    if(head == null || head.next == null) return false;
+
+
+    Node slow = head;
+    Node fast = head;
+    while(fast !=null && fast.next != null){
+      slow = slow.next;
+      fast = fast.next.next;
+
+      if(fast == slow) return true;
+
+    }
+    return false;
+  }
+  public boolean hasCycle(){
+    head = hasCycle(head);
+  }
+
   public String toString(){
     Node current = head;
     StringBuilder result = new StringBuilder();
