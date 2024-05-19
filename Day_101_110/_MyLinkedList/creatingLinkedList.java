@@ -271,6 +271,24 @@ public class creatingLinkedList {
        hasCycle(head);
   }  
 
+  public Node middleNode(Node head) {
+
+    if (head.next == null) return head;
+
+     Node fast = head.next;
+
+    while(fast != null && fast.next != null)
+    {
+    fast = fast.next.next;
+    head = head.next;
+    }
+    if (fast == null) return head;
+
+ return head.next;
+}
+    
+}
+
   public String toString(){
     Node current = head;
     StringBuilder result = new StringBuilder();
