@@ -290,10 +290,14 @@ public void middleNode(){
   middleNode(head);
 }
 
-public void Detect_RemoveLoop(){
-  
-}
+public Node Detect_RemoveLoop(Node head){
+  if(head == null || head.next == null) return head;
 
+
+}
+public Detect_RemoveLoop(){
+  Detect_RemoveLoop(head);
+}
   public String toString(){
     Node current = head;
     StringBuilder result = new StringBuilder();
