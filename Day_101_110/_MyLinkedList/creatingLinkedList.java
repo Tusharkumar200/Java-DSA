@@ -323,9 +323,9 @@ public Node deleteDuplicat(Node head){
 
   if(head == null || head.next == null) return head;
   Node current = head;
-  int val= 0;
+  
   while(current != null && current.next !=null){
-    if(current == current.next){
+    if(current.data == current.next.data){
       Node nextNode = current.next;
       current.next = nextNode.next;
       nextNode.next = null;

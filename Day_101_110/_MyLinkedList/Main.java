@@ -16,8 +16,9 @@ public class Main {
     list.insert(70);
     list.insert(70);
     
-    list.deleteDuplicat(null);
-    
+    list.deleteDuplicat();
+    System.out.print(list);
+    System.out.println();
 
     // list.middleNode();
     // list.Detect_RemoveLoop();
