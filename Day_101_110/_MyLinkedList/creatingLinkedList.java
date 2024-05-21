@@ -304,11 +304,11 @@ public Node Detect_RemoveLoop(Node head){
   log.add(current);
 
   while(current !=null){
-    
-  }
 
+  }
+  return head;
 }
-public Detect_RemoveLoop(){
+public void Detect_RemoveLoop(){
   Detect_RemoveLoop(head);
 }
 
