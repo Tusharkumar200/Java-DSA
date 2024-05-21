@@ -13,8 +13,8 @@ public class Main {
     list.insert(70);
     
 
-    list.middleNode();
-    
+    // list.middleNode();
+    list.Detect_RemoveLoop();
     System.out.println(list);
       list.hasCycle();
     // list.reverseinK(4);
