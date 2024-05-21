@@ -320,7 +320,21 @@ public void Detect_RemoveLoop(){
 }
 
 public Node deleteDuplicat(Node head){
-  
+
+  if(head == null || head.next == null) return head;
+  Node current = head;
+  while(current != null && current.next !=null){
+    if(current.val == current.next.val){
+      Node nextNode = current.next;
+      current.next = nextNode.next;
+      nextNode.next = null;
+
+    }
+    else{
+      current  = current.next;
+    }
+  }
+  return head;
 }
   public String toString(){
     Node current = head;
