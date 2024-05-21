@@ -1,5 +1,8 @@
 package _MyLinkedList;
 
+import java.util.HashSet;
+import java.util.Set;
+
 class Node{
   public int data;
   public Node next = null;
@@ -293,11 +296,22 @@ public void middleNode(){
 public Node Detect_RemoveLoop(Node head){
   if(head == null || head.next == null) return head;
 
+  Set <Node> log = new HashSet<>();
+
+  Node current = head;
+  Node prev = null;
+
+  log.add(current);
+
+  while(current !=null){
+    
+  }
 
 }
 public Detect_RemoveLoop(){
   Detect_RemoveLoop(head);
 }
+
   public String toString(){
     Node current = head;
     StringBuilder result = new StringBuilder();
