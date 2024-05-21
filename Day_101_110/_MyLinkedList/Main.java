@@ -9,20 +9,26 @@ public class Main {
     list.insert(30);
     list.insert(40);
     list.insert(50);
+    list.insert(50);
+    list.insert(50);
     list.insert(60);
     list.insert(70);
+    list.insert(70);
+    list.insert(70);
+    
+    list.deleteDuplicat(null);
     
 
     // list.middleNode();
-    list.Detect_RemoveLoop();
+    // list.Detect_RemoveLoop();
     System.out.println(list);
-      list.hasCycle();
+      // list.hasCycle();
     // list.reverseinK(4);
     System.out.println(list);
-    list.swapPair();
+    // list.swapPair();
 
-    list.reverseRec();
-    list.printRec();
+    // list.reverseRec();
+    // list.printRec();
     list.removeNthFromEndFast(4);
     list.removeNthFromEnd(2);
     // list.removeStart();

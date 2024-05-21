@@ -323,8 +323,9 @@ public Node deleteDuplicat(Node head){
 
   if(head == null || head.next == null) return head;
   Node current = head;
+  int val= 0;
   while(current != null && current.next !=null){
-    if(current.val == current.next.val){
+    if(current == current.next){
       Node nextNode = current.next;
       current.next = nextNode.next;
       nextNode.next = null;
@@ -336,7 +337,11 @@ public Node deleteDuplicat(Node head){
   }
   return head;
 }
-  public String toString(){
+  
+public void deleteDuplicat(){
+    deleteDuplicat(head);
+}
+public String toString(){
     Node current = head;
     StringBuilder result = new StringBuilder();
 
