@@ -319,6 +319,9 @@ public void Detect_RemoveLoop(){
   Detect_RemoveLoop(head);
 }
 
+public Node deleteDuplicat(Node head){
+  
+}
   public String toString(){
     Node current = head;
     StringBuilder result = new StringBuilder();
