@@ -290,6 +290,9 @@ public void middleNode(){
   middleNode(head);
 }
 
+public void Detect_RemoveLoop(){
+  
+}
 
   public String toString(){
     Node current = head;
