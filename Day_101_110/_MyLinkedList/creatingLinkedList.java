@@ -304,7 +304,14 @@ public Node Detect_RemoveLoop(Node head){
   log.add(current);
 
   while(current !=null){
+      prev = current;
+      current = current.next;
 
+      if(log.contains(current)){
+        prev.next = null;
+        return head;
+      }
+      log.add(current);
   }
   return head;
 }
