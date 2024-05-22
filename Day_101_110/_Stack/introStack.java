@@ -10,12 +10,14 @@ public class introStack {
     stack.push(3);
     stack.push(4);
     stack.push(5);
+    System.out.println(stack.peek());
     System.out.println(stack);
     
     // pop
     stack.pop();
     stack.pop();
-
+    
+    System.out.println(stack.isEmpty());
     System.out.println(stack);
 
 
