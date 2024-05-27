@@ -9,7 +9,7 @@ public class Main {
     stack.push(2);
     stack.push(1);
     
-
+// size of stack
     System.out.println("size : "+stack.size());
     System.out.println(stack);
   }
