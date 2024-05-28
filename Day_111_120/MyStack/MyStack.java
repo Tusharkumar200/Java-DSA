@@ -1,5 +1,5 @@
 package MyStack;
-
+import java.util.*;
 public class MyStack {
   private int[] items;
   private int top;
@@ -19,10 +19,8 @@ public class MyStack {
 
   public int pop(){
 
-    if(top == 0){
-      System.out.println("Your Stack is Empty ");
-      return -1;
-    }
+    if(top == 0) throw new EmptyStackException();  //stack underFlow
+      
     this.top--;
     int value = items[top];
     items[top] = 0;
