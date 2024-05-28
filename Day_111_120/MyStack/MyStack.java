@@ -12,11 +12,8 @@ public class MyStack {
   }
 
   public void push(int value){
-    if(top == size){
-      System.out.println("Stack is full");
-      return;
-    }
-    this.items[this.top] = value;
+    if(top == size) throw new StackOverflowError();
+   this.items[this.top] = value;
     this.top++;
   }
 
@@ -36,7 +33,7 @@ public class MyStack {
   public int peek(){
     return items[top-1];
   }
-  
+
 
   public int size(){
     return top;
