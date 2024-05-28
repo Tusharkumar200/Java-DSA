@@ -20,6 +20,14 @@ public class MyStack {
     this.top++;
   }
 
+  public int pop(){
+    this.top--;
+    int value = items[top];
+    items[top] = 0;
+    return value;
+
+  }
+
   public int size(){
     return top;
   }
