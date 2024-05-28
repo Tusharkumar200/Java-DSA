@@ -21,6 +21,11 @@ public class MyStack {
   }
 
   public int pop(){
+
+    if(top == 0){
+      System.out.println("Your Stack is Empty ");
+      return -1;
+    }
     this.top--;
     int value = items[top];
     items[top] = 0;
