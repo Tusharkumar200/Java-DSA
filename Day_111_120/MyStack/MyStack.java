@@ -33,6 +33,11 @@ public class MyStack {
 
   }
 
+  public int peek(){
+    return items[top-1];
+  }
+  
+
   public int size(){
     return top;
   }
