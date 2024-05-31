@@ -25,7 +25,9 @@ public class introStack {
     // stack.pop();
     // stack.pop();
     
+
     System.out.println(stack.isEmpty());
+    // print the stack
     System.out.println(stack);
 
 
