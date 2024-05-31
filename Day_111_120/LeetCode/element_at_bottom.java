@@ -20,4 +20,17 @@ public class element_at_bottom {
 
   // 2nd approched
 
+  public static Stack<Integer> pushAtBottom2(Stack <Integer> myStack, int x){
+
+    if(myStack.isEmpty()){
+      myStack.push(x);
+      return myStack;
+    }
+
+    int num = myStack.pop();
+    myStack = pushAtBottom2(myStack,x);
+    myStack.push(num);
+
+    return myStack;
+  }
 }
