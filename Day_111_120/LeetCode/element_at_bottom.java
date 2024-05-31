@@ -17,4 +17,7 @@ public class element_at_bottom {
         }
         return myStack;
   }
+
+  // 2nd approched
+
 }
