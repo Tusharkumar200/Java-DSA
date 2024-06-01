@@ -17,12 +17,12 @@ public class reverseUsingRecursion{
     return myStack;
   }
 
-  public stack void reverseStack(Stack<Integer> stack){
+  public static void reverseStack(Stack<Integer> stack){
 
     if(stack.isEmpty()) return;
 
     int num = stack.pop();
-    reverseStack(stack)
+    reverseStack(stack);
 
     pushAtBottom2(stack,num);
   }
