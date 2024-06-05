@@ -9,6 +9,7 @@ public class My_queue {
     private int size;
 
     public My_queue(int capacity) {
+        
         this.items = new int[capacity];
         this.front = -1;
         this.rear = 0;
@@ -16,7 +17,10 @@ public class My_queue {
     }
 
     public void enqueue(int val) {
-        
+        if(rear == size){
+            System.out.println("Queue is full");
+            return;
+        }
         items[rear] = val;
         rear++;  
     
