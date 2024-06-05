@@ -25,6 +25,19 @@ public class My_queue {
         rear++;  
     
     }
+    public int dequeue() {
+
+        if (front+1 == rear) {
+            System.out.println("Queue is empty");
+            return -1;
+        }
+        front++;
+        int value = items[front];
+        items[front] = 0;
+        return value;
+    
+    }
+
 
     public String toString(){
        return Arrays.toString(items);
