@@ -2,7 +2,9 @@ package Leedcode;
 
 // question no 622
 // Design your implementation of the circular queue. The circular queue is a linear data structure in which the operations are performed based on FIFO (First In First Out) principle and the last position is connected back to the first position to make a circle. It is also called "Ring Buffer".
-question link: https://leetcode.com/problems/design-circular-queue/
+
+// question link: https://leetcode.com/problems/design-circular-queue/
+
 public class CircularQueue {
     
     private int[] items;
@@ -11,7 +13,7 @@ public class CircularQueue {
     private int size;
     private int count;
 
-    public myCircularQueue(int k) {
+    public CircularQueue(int k) {
 
         this.items = new int[k];
         this.front = -1;
