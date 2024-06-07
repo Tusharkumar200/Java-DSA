@@ -12,6 +12,8 @@ public class main {
 
         q.dequeue();
         q.dequeue();
+
+        q.enqueue(7);
                
         System.out.println(q);
     }
