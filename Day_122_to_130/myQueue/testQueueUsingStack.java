@@ -10,8 +10,5 @@ public class testQueueUsingStack {
         queue.enqueue(5);
         System.out.println(queue.dequeue());
         System.out.println(queue.dequeue());
-        System.out.println(queue.dequeue());
-        System.out.println(queue.dequeue());
-        System.out.println(queue.dequeue());
     }
 }
