@@ -24,18 +24,20 @@ public class My_queue {
             return;
         }
         items[rear] = val;
-        rear++;  
+        rear = (rear+1)%size;
+        count++;  
     
     }
     public int dequeue() {
 
-        if (front+1 == rear) {
+        if (count == 0) {
             System.out.println("Queue is empty");
             return -1;
         }
-        front++;
+        front = (front+1)%size;
         int value = items[front];
         items[front] = 0;
+        count--;
         return value;
     
     }
