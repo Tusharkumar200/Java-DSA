@@ -1,6 +1,6 @@
 package myQueue;
 
-public class testing_priorityQueue {
+public class testing_priorityQueue{
 
     public static void main(String[] args) {
         
