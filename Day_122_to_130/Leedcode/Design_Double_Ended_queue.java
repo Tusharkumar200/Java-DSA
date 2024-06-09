@@ -42,9 +42,26 @@ public class Design_Double_Ended_queue{
     }
 
     public int popRear(){
-       
+       if(isEmpty()) return -1;
+       rear--;
+         if(rear == -1)
+              rear = size - 1;
+        
+        return items[rear];
     
     }
+
+    public int getFront(){
+        if(isEmpty()) return -1;
+        return items[front];
+    }
+
+    public int getRear(){
+        if(isEmpty()) return -1;
+        int lastIndex = rear - 1;
+        if(lastIndex == -1) lastIndex = size - 1;
+        return items[lastIndex];
+    } 
 
     public boolean isEmpty(){
         return count == 0;
