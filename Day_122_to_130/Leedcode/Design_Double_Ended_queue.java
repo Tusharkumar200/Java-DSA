@@ -34,6 +34,15 @@ public class Design_Double_Ended_queue{
         count++;
     }
 
+    public int popRear(){
+        if(isEmpty()) return -1;
+        int value = items[front];
+        front = (front+1)%size;
+        count--;
+        return value;
+    
+    }
+
     public boolean isEmpty(){
         return count == 0;
     }
