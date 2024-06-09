@@ -12,7 +12,11 @@ public class Design_Double_Ended_queue{
         items = new int[n];
         front = 0;
         rear = 0;
+        count = 0;
+        size = n;
         
     }
+
+    
 
 }
