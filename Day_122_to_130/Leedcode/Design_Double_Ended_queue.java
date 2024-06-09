@@ -17,6 +17,20 @@ public class Design_Double_Ended_queue{
         
     }
 
+    public boolean pushRear(int x){
+        if(isFull()) return false;
+        items[rear] = x;
+        rear = (rear+1)%size;
+        count++;
+    }
+
+    public boolean isEmpty(){
+        return count == 0;
+    }
     
+    public boolean isFull(){
+        return count == size;
+    }
+
 
 }
