@@ -26,20 +26,23 @@ public class Design_Double_Ended_queue{
         count++;
         return true;
     } 
-
-    public boolean pushRear(int x){
-        if(isFull()) return false;
-        items[rear] = x;
-        rear = (rear+1)%size;
-        count++;
-    }
-
-    public int popRear(){
+    public int popFront(){
         if(isEmpty()) return -1;
         int value = items[front];
         front = (front+1)%size;
         count--;
         return value;
+    }
+    public boolean pushRear(int x){
+        if(isFull()) return false;
+        items[rear] = x;
+        rear = (rear+1)%size;
+        count++;
+        return true;
+    }
+
+    public int popRear(){
+       
     
     }
 
