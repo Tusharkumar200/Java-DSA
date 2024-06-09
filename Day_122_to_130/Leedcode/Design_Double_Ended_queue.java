@@ -17,6 +17,16 @@ public class Design_Double_Ended_queue{
         
     }
 
+    public boolean pushFront(int x){
+        if(isFull()) return false;
+        front--;
+        if(front == -1)
+           front = size - 1;
+        items[front] = x;
+        count++;
+        return true;
+    } 
+
     public boolean pushRear(int x){
         if(isFull()) return false;
         items[rear] = x;
