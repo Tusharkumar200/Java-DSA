@@ -1,6 +1,6 @@
 package myQueue;
 
-public class main {
+public class Main {
     public static void main(String[] args) {
         My_queue q = new My_queue(6);
         q.enqueue(1);
