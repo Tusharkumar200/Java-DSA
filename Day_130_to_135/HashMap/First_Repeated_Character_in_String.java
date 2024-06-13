@@ -16,7 +16,7 @@ public class First_Repeated_Character_in_String {
         }
 
         for(char ch: str.toCharArray()){
-            if(freqMap.get(ch)>1){
+            if(freqMap.getOrDefault(ch,0)>1){
                 System.out.println(ch);
                 break;
             }
