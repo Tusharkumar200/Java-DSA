@@ -1,6 +1,9 @@
 import java.util.HashMap;
 import java.util.Map;
 
+
+// Q1. First Non Repeated Character in String
+// Q2. First Repeated Character in String
 public class First_Non_Repeated_Character_in_String {
     public static void main(String[] args) {
         Map<Character,Integer> freqMap = new HashMap<>();
