@@ -11,5 +11,7 @@ public class Main{
 
         System.out.println(map.get(1));
         
+        map.remove(1);
+        System.out.println(map);
     }
 }

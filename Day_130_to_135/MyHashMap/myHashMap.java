@@ -46,6 +46,22 @@ public class myHashMap {
         return true;
     }
 
+    public String remove (int key){
+        int index = hashKey(key);
+        if(list[index] == null){
+            throw new IllegalStateException();
+        }
+        var bucket = list[index];
+
+        for(var entry:bucket){
+            if(entry.key == key){
+                bucket.remove(entry);
+                return entry.value;
+            }
+        }
+        throw new IllegalStateException();
+    }
+
     public String get(int key){
         int index = hashKey(key);
         var bucket = list[index];
