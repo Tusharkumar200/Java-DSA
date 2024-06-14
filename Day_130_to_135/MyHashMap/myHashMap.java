@@ -1,8 +1,7 @@
 package MyHashMap;
 
-import java.util.Arrays;
-import java.util.LinkedList;
-import java.util.AbstractList; // Add this import statement
+import java.util.*;
+
 
 class Entry{
     public int key;
@@ -22,7 +21,8 @@ class Entry{
 public class myHashMap {
     LinkedList <Entry>[] list;
 
-     public myHashMap(){
+     @SuppressWarnings("unchecked")
+    public myHashMap(){
         this.list = new LinkedList[5];
 
     }
@@ -33,9 +33,31 @@ public class myHashMap {
         if(list[index] == null){
             list[index]= new LinkedList<>();
         }
-        var bucket = list[index];
+
+        LinkedList<Entry> bucket = list[index];
+
+        for(var entry:bucket){
+            if(entry.key ==key){
+                entry.value = value;
+                return true;
+            }
+        }
         bucket.addLast(new Entry(key, value));
         return true;
+    }
+
+    public String get(int key){
+        int index = hashKey(key);
+        var bucket = list[index];
+      if(list[index] == null){
+        throw new IllegalStateException();
+      }
+        for (var entry : bucket){
+            if(entry.key == key){
+                return entry.value;
+            }
+        }
+        throw new Exception();
     }
 
     private int hashKey(int key){
