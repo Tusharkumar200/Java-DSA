@@ -2,6 +2,8 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class First_Repeated_Character_in_String {
+    // Find the first repeated character in a string
+    // Input: "a green apple"
     public static void main(String[] args) {
         Map<Character,Integer> freqMap = new HashMap<>();
         String str = "a green apple";
