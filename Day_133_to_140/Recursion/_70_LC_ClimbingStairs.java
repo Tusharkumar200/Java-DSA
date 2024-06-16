@@ -13,7 +13,7 @@ public class _70_LC_ClimbingStairs {
         return res;
     }
 
-    // Testing ...
+    // Testing code
     public static void main(String[] args) {
         int n = 5;
         System.out.println(climbStairs(n));
