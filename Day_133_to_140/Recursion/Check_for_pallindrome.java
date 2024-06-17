@@ -7,7 +7,8 @@ public class Check_for_pallindrome {
     }
 
     public static void main(String[] args) {
-        String str = "tushar";
-        isPallindrome(str, 0, str.length()-1);
+        String str = "madam";
+        
+        System.out.println(isPallindrome(str, 0, str.length()-1));
     }
 }
