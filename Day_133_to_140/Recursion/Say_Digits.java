@@ -11,6 +11,6 @@ public class Say_Digits {
     }
 
     public static void main(String[] args) {
-        sayDigits(123);
+        sayDigits(12566);
     }
 }
