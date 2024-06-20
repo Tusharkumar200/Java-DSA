@@ -1,6 +1,6 @@
 package sorting_algorithem;
 
-public class bubble_sort {
+public class sorting {
     private static void swap(int[] arr, int i , int j){
         int temp = arr[i];
         arr[i] = arr[j];
@@ -14,5 +14,19 @@ public class bubble_sort {
                 }
             }
        }
+    }
+
+    public static void selectionsort(int[] arr){
+
+        for(int i=0; i<arr.length-1; i++){
+            int minIndex = i;
+            for(int j = i+1; j<arr.length; j++){
+                if(arr[j] < minIndex){
+                    minIndex = j;
+                }
+            }
+            
+            swap(arr, minIndex, j);
+        }
     }
 }

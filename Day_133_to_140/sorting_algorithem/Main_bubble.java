@@ -4,7 +4,7 @@ public class Main_bubble {
     public static void main(String[] args) {
         
         int[]arr ={10,5,2,-1,3,8,2,4,11,6};
-        bubble_sort.bubblesort(arr);
+        sorting.bubblesort(arr);
         for(int i=0; i<arr.length; i++){
             System.out.print(arr[i]+" ");
         }
