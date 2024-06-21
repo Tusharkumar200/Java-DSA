@@ -29,4 +29,8 @@ public class sorting {
             swap(arr,i, minIndex);
         }
     }
+
+    public static void insertionSort(int[] arr){
+        
+    }
 }
