@@ -58,7 +58,7 @@ public class sorting {
             left[i] = arr[index++];
             
         }
-        for(int i=0; i<arr.length-middle; i++){
+        for(int i=middle; i<arr.length; i++){
             right[i -middle] = arr[index++];
         }
 
@@ -75,7 +75,7 @@ public class sorting {
         int index = 0, i = 0, j = 0;
 
         while(i < left.length && j < right.length){
-            if(left[i] <= right[j]){
+            if(left[i] < right[j]){
                 arr[index++] = left[i++];
             }else{
                 arr[index++] = right[j++];
@@ -91,4 +91,7 @@ public class sorting {
               arr[index++] = right[j++];
          }
     }
+
+
+
 }
