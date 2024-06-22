@@ -43,4 +43,52 @@ public class sorting {
             arr[j+1] = currentElement;
         }
     }
+
+    public static void mergeSort(int arr[]){
+
+        if(arr.length < 2) return;
+        int middle = arr.length/2;
+
+        int left[] = new int[middle];
+        int right[] = new int[arr.length-middle];
+
+        int index = 0;
+
+        for(int i=0; i<middle; i++){
+            left[i] = arr[index++];
+            
+        }
+        for(int i=0; i<arr.length-middle; i++){
+            right[i -middle] = arr[index++];
+        }
+
+        //sort
+        mergeSort(left);
+        mergeSort(right);
+
+        // Merge
+        merge(left, right, arr);
+    }
+
+    private static void merge(int[] left, int[] right, int[] arr){
+     
+        int index = 0, i = 0, j = 0;
+
+        while(i < left.length && j < right.length){
+            if(left[i] <= right[j]){
+                arr[index++] = left[i++];
+            }else{
+                arr[index++] = right[j++];
+            }
+        }
+
+       while (i < left.length) {
+           arr[index++] = left[i++];
+        
+       }
+
+         while (j < right.length) {
+              arr[index++] = right[j++];
+         }
+    }
 }
