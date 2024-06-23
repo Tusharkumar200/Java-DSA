@@ -93,7 +93,27 @@ public class sorting {
     }
 
 
+    private static int getBoundary(int[] arr, int start, int end){
+        int pivot = arr[end];
+        int boundary = -1;
+
+        for(int i=start; i<=end; i++){
+            if(arr[i] < pivot){
+                boundary++;
+                swap(arr, i, ++boundary);
+            }
+        }
+        
+        return boundary;
+    
+    }
+
     public static void quickSort(int[] arr, int start,int end){
+        if(start >= end) return;
+
+        int boundary = getBoundary(arr, start, end);
+        quickSort(arr, start, boundary-1);
+        quickSort(arr, boundary+1, end);
 
     }
 
