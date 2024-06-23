@@ -7,7 +7,8 @@ public class Main_bubble {
         // sorting.bubblesort(arr);
         // sorting.selectionsort(arr);
         // sorting.insertionSort(arr);
-        sorting.mergeSort(arr);
+        // sorting.mergeSort(arr);
+        sorting.quickSort(arr);
         for(int i=0; i<arr.length; i++){
             System.out.print(arr[i]+" ");
         }

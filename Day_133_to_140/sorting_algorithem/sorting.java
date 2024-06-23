@@ -95,11 +95,11 @@ public class sorting {
 
     private static int getBoundary(int[] arr, int start, int end){
         int pivot = arr[end];
-        int boundary = -1;
+        int boundary = start - 1;
 
         for(int i=start; i<=end; i++){
-            if(arr[i] < pivot){
-                boundary++;
+            if(arr[i] <= pivot){
+               
                 swap(arr, i, ++boundary);
             }
         }
@@ -110,9 +110,12 @@ public class sorting {
 
     public static void quickSort(int[] arr, int start,int end){
         if(start >= end) return;
-
+//       Partitioning
         int boundary = getBoundary(arr, start, end);
-        quickSort(arr, start, boundary-1);
+    //    sort left part
+    quickSort(arr, start, boundary-1);
+    //    sort right part
+       
         quickSort(arr, boundary+1, end);
 
     }
