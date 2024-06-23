@@ -1,6 +1,6 @@
 package sorting_algorithem;
 
-public class Main_bubble {
+public class Main {
     public static void main(String[] args) {
         
         int[]arr ={10,5,2,-1,3};
