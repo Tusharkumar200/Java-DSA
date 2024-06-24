@@ -46,4 +46,22 @@ public static int RecursiveBinarySearch(int[] arr, int val, int start , int end)
         }
         return -1;
     }
+
+
+    public static int exponentialSearch(int[] arr, int val){
+
+        if(arr[0] == val) return 0;
+
+        int currentIndex = 1;
+
+        while(currentIndex < arr.length && arr[currentIndex] <= val){
+            currentIndex = currentIndex * 2;
+
+            if(currentIndex >= arr.length){
+                currentIndex = arr.length -1;
+
+            }
+            return binarySearch(arr, val ,currentIndex /2,currentIndex)
+        }
+    }
 }
