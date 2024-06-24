@@ -8,4 +8,42 @@ public class Searcher {
         }
         return -1;
     }
+
+   
+
+public static int RecursiveBinarySearch(int[] arr, int val, int start , int end){
+
+    if(start >end) return -1;
+    int mid = (start + end)/2;
+
+    if(arr[mid] ==val) return mid;
+
+     if(arr[mid] > val){
+        return RecursiveBinarySearch(arr, val, start, mid-1);
+    }
+    
+    return RecursiveBinarySearch(arr, val, mid+1, end);
+    
+}
+
+//    in binary search we need to sort the array first
+    public static int binarySearch(int[] arr, int val){
+        int start =0;
+        int end = arr.length-1;
+
+        while(start <= end){
+
+            int mid = (start + end)/2;
+
+            if(arr[mid] == val) return mid;
+
+            else if(arr[mid] > val){
+                end = mid-1;
+            }
+            else{
+                start = mid+1;
+            }
+        }
+        return -1;
+    }
 }
