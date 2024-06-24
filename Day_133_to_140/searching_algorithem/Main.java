@@ -7,7 +7,8 @@ public class Main {
         int Barr[] = {1,2,3,4,5,6,7,8,9,10};
         // int result = Searcher.linearSearch(arr, 2);
 
-        int result = Searcher.binarySearch(Barr, 5);
+        // int result = Searcher.binarySearch(Barr, 5);
+        
         System.out.println("found at index :"+ result);
     }
 }
