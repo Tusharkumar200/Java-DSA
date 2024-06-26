@@ -15,7 +15,7 @@ public class sorting {
             }
        }
     }
-
+// selection sort
     public static void selectionsort(int[] arr){
 
         for(int i=0; i<arr.length-1; i++){
@@ -29,7 +29,7 @@ public class sorting {
             swap(arr,i, minIndex);
         }
     }
-
+// insertion Sort
     public static void insertionSort(int[] arr){
 
         for(int i=1; i<arr.length;i++){
@@ -44,6 +44,7 @@ public class sorting {
         }
     }
 
+    // merge Sort
     public static void mergeSort(int arr[]){
 
         if(arr.length < 2) return;
@@ -107,7 +108,7 @@ public class sorting {
         return boundary;
     
     }
-
+// quick sort
     public static void quickSort(int[] arr, int start,int end){
         if(start >= end) return;
 //       Partitioning
