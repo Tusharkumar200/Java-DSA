@@ -28,5 +28,22 @@ public class BinarySearchTree {
             root = node;
             return;
         }
+            TreeNode current = root;
+        while(true){
+            if(value <= current.data){ // Go Left
+                if(current.leftChild == null){
+                    current.leftChild = new TreeNode(value);
+                    break;
+                }
+                current = current.leftChild;
+            }
+            else{  // Go Right
+                if(current.rightChild == null){
+                    current.rightChild = new TreeNode(value);
+                    break;
+                }
+                current = current.rightChild;
+            }
+        }
     }
 }

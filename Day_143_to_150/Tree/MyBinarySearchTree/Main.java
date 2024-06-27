@@ -3,6 +3,11 @@ package Tree.MyBinarySearchTree;
 public class Main {
     public static void main(String[] args) {
         BinarySearchTree tree = new BinarySearchTree();
-        tree.insert(7);
+        int nums[] = {7,8,1,3,2,5,10,4};
+
+        for(int num: nums){
+            tree.insert(num);
+        }
+
     }
 }
