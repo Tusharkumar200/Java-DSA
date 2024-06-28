@@ -42,7 +42,7 @@ public class BinarySearchTree {
        return root;
     }
 
-// Find Element in Tree
+// Find Element in Tree.
     private TreeNode find (TreeNode root, int value){
         if(root == null) return null;
 
