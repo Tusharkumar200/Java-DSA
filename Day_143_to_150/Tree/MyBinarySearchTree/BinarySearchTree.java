@@ -20,7 +20,7 @@ public class BinarySearchTree {
     public BinarySearchTree(){
         this.root = null;
     }
-
+// Travelling Nodes using Recursion
     public TreeNode insert(TreeNode root ,int value){
         if(root == null){
             System.out.println("Root is Empty,insert "+ value);
@@ -42,6 +42,22 @@ public class BinarySearchTree {
        return root;
     }
 
+// Find Element in Tree
+    private TreeNode find (TreeNode root, int value){
+        if(root == null) return null;
+
+        if(root.data == value) return root;
+
+        if(value <root.data){ // search in left subtree
+            return find(root.leftChild, value);
+        }
+
+        return find(root.rightChild , value);
+    }
+
+    public TreeNode find(int value){
+        return find(root, value);
+    }
     public void insert(int value){
 
        root = insert(root,value);
