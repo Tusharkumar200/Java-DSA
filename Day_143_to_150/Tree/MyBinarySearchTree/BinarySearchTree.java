@@ -23,19 +23,19 @@ public class BinarySearchTree {
 // Travelling Nodes using Recursion
     public TreeNode insert(TreeNode root ,int value){
         if(root == null){
-            System.out.println("Root is Empty,insert "+ value);
+            // System.out.println("Root is Empty,insert "+ value);
             root = new TreeNode(value);
             return root;
         }
 
         if(value <= root.data){
-            System.out.println("Value "+ value + "is less the root");
-            System.out.println("Going to left");
+            // System.out.println("Value "+ value + "is less the root");
+            // System.out.println("Going to left");
             root.leftChild = insert(root.leftChild, value);
         }
         else{
-            System.out.println("Value "+ value + "is grater the root");
-            System.out.println("Going to right");
+            // System.out.println("Value "+ value + "is grater the root");
+            // System.out.println("Going to right");
             root.rightChild = insert(root.rightChild, value);
         }
 
@@ -72,7 +72,35 @@ public class BinarySearchTree {
     public void preOrderTraversal(){
         preOrderTraversal(root);
     }
-    
+
+// In-Order Tree Traversal
+//  Left -> Root -> Right
+
+    public void inOrderTraversal(TreeNode root){
+        if(root == null) return;
+
+        inOrderTraversal(root.leftChild);
+        System.out.println(root.data);
+        inOrderTraversal(root.rightChild);
+    }
+    public void inOrderTraversal(){
+        inOrderTraversal(root);
+    }
+
+    // Post-Order Tree Traversal
+    // Left -> Right -> Root
+
+    public void postOrderTraversal(TreeNode root){
+        
+        if(root == null) return;
+        postOrderTraversal(root.leftChild);
+        postOrderTraversal(root.rightChild);
+        System.out.println(root.data);
+    }
+    public void postOrderTraversal(){
+        postOrderTraversal(root);
+    }
+
     public void insert(int value){
 
        root = insert(root,value);
