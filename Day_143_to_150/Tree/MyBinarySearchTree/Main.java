@@ -9,7 +9,10 @@ public class Main {
             tree.insert(num);
         }
         // System.out.println(tree.find(5));
+    //  Testing preOrderTraversal
         // tree.preOrderTraversal();
+    
+    
         // tree.inOrderTraversal();
         tree.postOrderTraversal();
     }
