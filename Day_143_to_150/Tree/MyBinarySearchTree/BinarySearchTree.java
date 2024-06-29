@@ -58,6 +58,21 @@ public class BinarySearchTree {
     public TreeNode find(int value){
         return find(root, value);
     }
+
+    // Pre-Order Traversal
+    // Root -> Left -> Right
+
+    public void preOrderTraversal(TreeNode root){
+        if(root == null) return;
+
+        System.out.println(root.data);
+        preOrderTraversal(root.leftChild);
+        preOrderTraversal(root.rightChild);
+    }
+    public void preOrderTraversal(){
+        preOrderTraversal(root);
+    }
+    
     public void insert(int value){
 
        root = insert(root,value);
