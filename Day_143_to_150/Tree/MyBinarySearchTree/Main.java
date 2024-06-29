@@ -14,6 +14,8 @@ public class Main {
     
     //  Testing inOrderTraversal
         // tree.inOrderTraversal();
+
+    //  Testing postOrderTraversal
         tree.postOrderTraversal();
     }
 }
