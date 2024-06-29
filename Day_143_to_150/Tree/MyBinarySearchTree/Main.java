@@ -12,7 +12,7 @@ public class Main {
     //  Testing preOrderTraversal
         // tree.preOrderTraversal();
     
-    
+    //  Testing inOrderTraversal
         // tree.inOrderTraversal();
         tree.postOrderTraversal();
     }
