@@ -16,6 +16,8 @@ public class Main {
         // tree.inOrderTraversal();
 
     //  Testing postOrderTraversal
-        tree.postOrderTraversal();
+        // tree.postOrderTraversal();
+
+        System.out.println(tree.dept(1));
     }
 }

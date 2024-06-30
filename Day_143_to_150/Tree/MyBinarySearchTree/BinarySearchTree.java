@@ -129,7 +129,18 @@ public class BinarySearchTree {
         // }
     }
 
+    
+    private int dept(TreeNode root, int value, int dept){
+        if(root == null) return -1;
+
+        if(root.data == value) return dept;
+
+        if(value <= root.data){
+            return dept(root.leftChild , value, dept + 1);
+        }
+        return dept(root.rightChild , value, dept + 1);
+    }
     public int dept(int value){
-        
+          return  dept(root, value, 0);
     }
 }
