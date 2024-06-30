@@ -18,6 +18,8 @@ public class Main {
     //  Testing postOrderTraversal
         // tree.postOrderTraversal();
 
-        System.out.println(tree.dept(1));
+        // System.out.println(tree.dept(1));
+
+        System.out.println(tree.getHeightForNodeWithValue(3));
     }
 }
