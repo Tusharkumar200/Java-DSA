@@ -20,6 +20,6 @@ public class Main {
 
         // System.out.println(tree.dept(1));
 
-        System.out.println(tree.(9));
+        System.out.println(tree.getHeightForNodeWithValue(9));
     }
 }
