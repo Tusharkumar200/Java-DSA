@@ -3,7 +3,7 @@ package Tree.MyBinarySearchTree;
 public class Main {
     public static void main(String[] args) {
         BinarySearchTree tree = new BinarySearchTree();
-        int nums[] = {7,3,9,1,4,8,10};
+        int nums[] = {7,3,9,1,4,8,10,1,2};
 
         for(int num: nums){
             tree.insert(num);
@@ -20,6 +20,6 @@ public class Main {
 
         // System.out.println(tree.dept(1));
 
-        System.out.println(tree.getHeightForNodeWithValue(3));
+        System.out.println(tree.(9));
     }
 }
