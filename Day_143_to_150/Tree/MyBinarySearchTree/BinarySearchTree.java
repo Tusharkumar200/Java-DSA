@@ -143,4 +143,10 @@ public class BinarySearchTree {
     public int dept(int value){
           return  dept(root, value, 0);
     }
+
+    public int height(TreeNode root , int value){
+        if(root == null) return -1;
+
+        if(root.leftChild == null && root.rightChild == null) return 0;
+    }
 }
