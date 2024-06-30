@@ -144,9 +144,27 @@ public class BinarySearchTree {
           return  dept(root, value, 0);
     }
 
-    public int height(TreeNode root , int value){
+    public int heightOfTree(TreeNode root){
         if(root == null) return -1;
 
         if(root.leftChild == null && root.rightChild == null) return 0;
+
+        return 1 + Math.max(heightOfTree(root.leftChild) ,heightOfTree(root.rightChild));
+    }
+
+    public int getHeightForNode(TreeNode root , int value){
+        if(root == null) return -1;
+        if(root.data == value) return heightOfTree(root);
+
+        if(value <= root.data) return getHeightForNode(root.leftChild, value);
+        return getHeightForNode(root.rightChild, value);
+    }
+
+    public int getHeight(){
+        return heightOfTree( root);
+    }
+
+    public int getHeightForNodeWithValue(int value){
+        return getHeightForNode(root, value);
     }
 }
