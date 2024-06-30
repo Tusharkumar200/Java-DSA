@@ -128,4 +128,8 @@ public class BinarySearchTree {
         //     }
         // }
     }
+
+    public int dept(int value){
+        
+    }
 }
