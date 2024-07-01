@@ -170,5 +170,14 @@ public class BinarySearchTree {
 
     // Minimum Value In Tree
 
+    public TreeNode getMin(TreeNode root){
+        if(root == null) return null;
+
+        if(root.leftChild == null) return root;
+        return getMin(root.leftChild);
+    }
     
+    public TreeNode getMin(){
+        return getMin(root);
+    }
 }
