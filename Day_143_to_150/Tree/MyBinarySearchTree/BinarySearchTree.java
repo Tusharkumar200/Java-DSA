@@ -183,9 +183,12 @@ public class BinarySearchTree {
 
     public boolean isEqual(TreeNode  r1 ,  TreeNode  r2){
         if(r1 == null && r2 == null) return true;
+
+        if(r1 == null) return false;
+        if(r2 == null) return false;
         return r1.data  == r2.data && isEqual(r1.leftChild , r2.leftChild) && isEqual(r1.rightChild , r2.rightChild);
     }
-    public boolean isEqual(TreeNode tree){
-        return isEqual(root, tree);
+    public boolean isEqual(BinarySearchTree tree){
+        return isEqual(root, tree.root);
     }
 }
