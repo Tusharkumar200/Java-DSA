@@ -180,7 +180,12 @@ public class BinarySearchTree {
     public TreeNode getMin(){
         return getMin(root);
     }
-    public boolean isEqual(){
-        
+
+    public boolean isEqual(TreeNode  r1 ,  TreeNode  r2){
+        if(r1 == null && r2 == null) return true;
+        return r1.data  == r2.data && isEqual(r1.leftChild , r2.leftChild) && isEqual(r1.rightChild , r2.rightChild);
+    }
+    public boolean isEqual(TreeNode tree){
+        return isEqual(root, tree);
     }
 }
