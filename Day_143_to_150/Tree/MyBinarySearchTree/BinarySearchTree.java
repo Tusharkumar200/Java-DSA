@@ -180,4 +180,7 @@ public class BinarySearchTree {
     public TreeNode getMin(){
         return getMin(root);
     }
+    public boolean isEqual(){
+        
+    }
 }
