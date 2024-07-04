@@ -1,5 +1,7 @@
 package Tree.MyBinarySearchTree;
 
+import java.util.LinkedList;
+import java.util.List;
 
 class TreeNode{
     int data;
@@ -99,6 +101,22 @@ public class BinarySearchTree {
     }
     public void postOrderTraversal(){
         postOrderTraversal(root);
+    }
+
+    private void nodesAtKDistance(TreeNode root, int k , List<Integer> result){
+        if(root == null) return;
+        if(k == 0) {
+            result.add(root.data);
+            return;
+        }
+        nodesAtKDistance(root.leftChild , k-1 , result);
+        nodesAtKDistance(root.rightChild , k-1 , result);
+    }
+
+    public List<Integer> nodesAtKDistance(int k){
+        List<Integer> result = new LinkedList<>();
+        nodesAtKDistance(root , k , result);
+        return result;
     }
 
     public void insert(int value){
