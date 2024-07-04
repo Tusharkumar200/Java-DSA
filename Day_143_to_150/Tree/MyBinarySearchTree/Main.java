@@ -30,6 +30,8 @@ public class Main {
 
         // System.out.println(tree.getMin());
 
-        System.out.println(tree.isEqual(tree2));
+        // System.out.println(tree.isEqual(tree2));
+         System.out.println(tree.nodesAtKDistance(2));
+        
     }
 }
