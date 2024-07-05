@@ -209,4 +209,12 @@ public class BinarySearchTree {
     public boolean isEqual(BinarySearchTree tree){
         return isEqual(root, tree.root);
     }
+
+    public void levelOrderTraversalBadWay(){
+        int height  = getHeight();
+
+        for(int i =0; i<= height; i++ ){
+            System.out.println(nodesAtKDistance(i));
+        }
+    }
 }
