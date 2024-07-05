@@ -2,6 +2,9 @@ package Tree.MyBinarySearchTree;
 
 import java.util.LinkedList;
 import java.util.List;
+import java.util.Queue;
+
+
 
 class TreeNode{
     int data;
@@ -215,6 +218,19 @@ public class BinarySearchTree {
 
         for(int i =0; i<= height; i++ ){
             System.out.println(nodesAtKDistance(i));
+        }
+    }
+
+    public void levelOrderTraversal(){
+        Queue<TreeNode> q = new LinkedList<>();
+        q.add(root);
+
+        while(!q.isEmpty()){
+            TreeNode node = q.poll();
+            System.out.println(node.data);
+
+            if(node.leftChild != null) q.add(node.leftChild);
+            if(node.rightChild != null) q.add(node.rightChild);
         }
     }
 }
