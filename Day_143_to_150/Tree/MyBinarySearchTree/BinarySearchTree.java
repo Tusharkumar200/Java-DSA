@@ -221,16 +221,24 @@ public class BinarySearchTree {
         }
     }
 
-    public void levelOrderTraversal(){
+    public List<List<Integer>> levelOrderTraversal(){
+        List<List<Integer>> list = new LinkedList<>();
         Queue<TreeNode> q = new LinkedList<>();
         q.add(root);
 
         while(!q.isEmpty()){
-            TreeNode node = q.poll();
-            System.out.println(node.data);
+           int size = q.size();
+            List<Integer> temp = new LinkedList<>();
 
-            if(node.leftChild != null) q.add(node.leftChild);
-            if(node.rightChild != null) q.add(node.rightChild);
+              for(int i = 0; i <size ; i++){
+                    TreeNode node = q.poll();
+                    temp.add(node.data);
+                    if(node.leftChild != null) q.offer(node.leftChild);
+                    if(node.rightChild != null) q.offer(node.rightChild);
+              }
+                list.add(temp);
         }
+
+        return list;
     }
 }

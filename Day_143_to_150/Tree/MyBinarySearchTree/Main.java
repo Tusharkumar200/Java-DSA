@@ -1,6 +1,7 @@
 package Tree.MyBinarySearchTree;
 
 public class Main {
+    
     public static void main(String[] args) {
         BinarySearchTree tree = new BinarySearchTree();
         BinarySearchTree tree2 = new BinarySearchTree();
@@ -31,7 +32,9 @@ public class Main {
         // System.out.println(tree.getMin());
 
         // System.out.println(tree.isEqual(tree2));
-         System.out.println(tree.nodesAtKDistance(2));
+        //  System.out.println(tree.nodesAtKDistance(2));
+
+        System.out.println(tree.levelOrderTraversal());
         
     }
 }
