@@ -125,6 +125,9 @@ public class BinarySearchTree {
     public void insert(int value){
 
        root = insert(root,value);
+
+       // second way of doing insertation .
+       
         // TreeNode node = new TreeNode(value);
 
         // if(root == null){
