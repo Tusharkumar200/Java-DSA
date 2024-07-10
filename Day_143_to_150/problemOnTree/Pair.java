@@ -11,6 +11,20 @@ class Node{
     }
 }
 
+
+// Diameter of Tree is the longest path between two nodes in a tree.
+// without pair it's time complexity is O(n^2)
+
+public class Pair{
+    int dia;
+    int height;
+
+    public Pair(int dia, int height){
+        this.dia = dia;
+        this.height = height;
+
+    }
+}
 public class Diameter_of_Tree {
 
     private int getHeight(Node root){
