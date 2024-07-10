@@ -25,6 +25,21 @@ public class Pair{
 
     }
 }
+
+private Pair diameterFast(Node root){
+    if(root == null) return new Pair(0,0);
+
+    Pair left = diameterFast(root.left);
+    Pair right = diameterFast(root.right);
+
+    int myDia = left.height + right.height + 1;
+    
+    int result = Math.max(myDia, Math.max(left.dia, right.dia));
+    int myHeight = Math.max(left.height , right.height) + 1;
+
+    return new Pair(result, myHeight);
+}
+
 public class Diameter_of_Tree {
 
     private int getHeight(Node root){
