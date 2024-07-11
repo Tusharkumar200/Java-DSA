@@ -1,4 +1,4 @@
-
+// this is a GFG problem
 class Node{
     int data;
     Node left;
@@ -42,15 +42,17 @@ private Pair diameterFast(Node root){
 
 public class Diameter_of_Tree {
 
-    private int getHeight(Node root){
-        if(root == null) return 0;
+    // * No needs of getHeight function after using Pair class
 
-        int left = getHeight(root.left);
-        int right  = getHeight(root.right);
+    // private int getHeight(Node root){
+    //     if(root == null) return 0;
 
-        return Math.max(left, right) + 1;
+    //     int left = getHeight(root.left);
+    //     int right  = getHeight(root.right);
 
-    }
+    //     return Math.max(left, right) + 1;
+
+    // }
     
     int diameter(Node root){
         // if(root == null) return 0;
