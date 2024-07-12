@@ -1,9 +1,24 @@
-
 public class Sum_Tree_or_Not {
-    boolean isSumTree(Node root ){
+    Pair isSumTreeSolver(Node root){
         
+            if(root  == null) return new Pair(true, 0);
+            if(root.left == null && root.right == null) return new Pair(true,root.data);
+
+            Pair left = isSumTreeSolver(root.left);
+            if(!left.isSumTree) return left;
+            
+            Pair right = isSumTreeSolver(root.right);
+            if(!right.isSumTree) return right;
+            
+            return new Pair(left.sum + right.sum == root.data , left.sum + right.sum + root.data);
+             
+    }
+    
+    boolean isSumTree(Node root ){
+        return isSumTreeSolver(root).isSumTree;
     }
 }
+
 
 public class Node{
     int data;
@@ -25,6 +40,6 @@ class Pair{
         this.isSumTree = isSumTree;
         this.sum = sum;
     }
-}
+}                                                                                                                                                           
 
 
