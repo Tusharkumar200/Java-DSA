@@ -11,6 +11,10 @@ public class Node{
     }
 }
 
+
+
 public class Sum_Tree_or_Not {
-    
+    boolean isSumTree(Node root ){
+        
+    }
 }
