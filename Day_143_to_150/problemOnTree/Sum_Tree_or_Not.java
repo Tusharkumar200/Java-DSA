@@ -20,7 +20,7 @@ public class Sum_Tree_or_Not {
 }
 
 
-public class Node{
+ class Node{
     int data;
     Node left;
     Node right;
