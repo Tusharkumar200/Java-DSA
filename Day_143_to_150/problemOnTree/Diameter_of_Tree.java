@@ -1,5 +1,5 @@
 // this is a GFG problem
-public class Node{
+class Node{
     int data;
     Node left;
     Node right;
