@@ -27,7 +27,7 @@ public class Pair{
     }
 }
 
-public class _GFG_topView{
+public class _bottomView{
     
     static ArrayList<Integer> topView(Node root){
         
@@ -42,9 +42,9 @@ public class _GFG_topView{
 
             Pair currentPair = q.poll();
 
-            if(!map.containsKey(currentPair.x)){
+            
                 map.put(currentPair.x, currentPair.node.data);
-            }
+            
 
             if(currentPair.node.left != null){
                 q.offer(new Pair(currentPair.node.left, currentPair.x - 1));
