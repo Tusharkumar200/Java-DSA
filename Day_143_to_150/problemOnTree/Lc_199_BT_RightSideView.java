@@ -5,7 +5,7 @@ import java.util.Map;
 import java.util.Queue;
 import java.util.TreeMap;
 
-public class TreeNode{
+ class TreeNode{
     int val;
       TreeNode left;
       TreeNode right;
