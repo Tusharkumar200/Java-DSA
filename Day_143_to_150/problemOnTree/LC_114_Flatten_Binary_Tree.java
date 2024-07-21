@@ -17,5 +17,12 @@ class TreeNode{
 }
 
 public class LC_114_Flatten_Binary_Tree {
-    
+    public void flatten(TreeNode root){
+        
+        TreeNode current = root;
+
+        while(current != null){
+            
+        }
+    }
 }
