@@ -23,6 +23,12 @@ public class LC_114_Flatten_Binary_Tree {
 
         while(current != null){
             
+            if(current.left != null){
+                    
+            }
+            else{
+                current = current.right;
+            }
         }
     }
 }
