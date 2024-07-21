@@ -29,7 +29,11 @@ public class LC_114_Flatten_Binary_Tree {
                         pred = pred.right;
                     }
                     if(pred.right == null){
+                        //Temp Link
                         pred.right = current.right;
+                        current.right = current.left;
+                        current.left = null;
+                        current = current.right;
                     }
             }
             else{
