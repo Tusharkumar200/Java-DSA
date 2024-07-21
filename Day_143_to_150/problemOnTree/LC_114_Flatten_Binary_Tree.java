@@ -24,7 +24,13 @@ public class LC_114_Flatten_Binary_Tree {
         while(current != null){
             
             if(current.left != null){
-                    
+                    TreeNode pred = current.left;
+                    while(pred.right != null){
+                        pred = pred.right;
+                    }
+                    if(pred.right == null){
+                        pred.right = current.right;
+                    }
             }
             else{
                 current = current.right;
