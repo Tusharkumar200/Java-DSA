@@ -12,19 +12,35 @@ class TreeNode {
 }
 
 public class Kth_Smallest_in_BST {
+    public int i=1;
+    private int optimizeWay(TreeNode root,  int k){
+        if(root == null) return -1;
+        
+        int left = optimizeWay(root.left, k);
+        if(left != -1) return left;
 
-    private void inorder(TreeNode root, List<Integer> result){
+        if(k==i) return root.val;
+
+        i++;
+        return optimizeWay(root.right, k);
+    }
+
+    // inorder traversal of BST gives sorted order of elements
+    private void inorder(TreeNode root, List<Integer> result , int k){
         if(root != null){
-            inorder(root.left, result);
+            inorder(root.left, result ,k);
             result.add(root.val);
-            inorder(root.right, result);
+            if(result.size() == k) return;
+            inorder(root.right, result ,k) ;
         }
     }
 
     public int kthSmallest(TreeNode root, int k) {
-        ArrayList<Integer> result = new ArrayList<>();
-        inorder(root, result);
-        return result.get(k-1);
+        ArrayList<Integer> list = new ArrayList<>();
+        // inorder(root, list,k );
+        // return list.get(k-1);
+
+        return optimizeWay(root, k);
     }
     
     
