@@ -38,4 +38,8 @@ public class AVLTREE{
     public void insert(int value){
         root = insert(root, value);
     }
+
+    public String toString(){
+        return "Value ="+ this.value;
+    }
 }
