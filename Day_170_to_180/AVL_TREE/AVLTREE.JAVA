@@ -31,6 +31,11 @@ public class AVLTREE{
         }else{
             node.right = insert(node.right, value);
         }
+        root.height = Math.max(height(node.left), height(node.right)) +1;
+
+        if(!isBalanced(root)){
+            System.out.println("There is an imbalance at node" + root);
+        }
 
         return root;
     }   
@@ -40,7 +45,23 @@ public class AVLTREE{
     }
 
     // Detecting Imbalanced Node
-    
+        private int getBalenceFactor(AVLNODE  node){
+            if(node == null) return 0;
+            return getHeight(node.left) - getHeight(node.right);
+
+            
+        }
+
+        private int height(AVLNODE node){
+            if(node == null) return -1;
+            return node.height;
+        }
+
+        private boolean isBalanced(AVLNODE node){
+            if(node == null) return true;
+            int balanceFactor = getBalenceFactor(node);
+            return balanceFactor >= -1 && balanceFactor <=1;
+        }
 
     public String toString(){
         return "Value ="+ this.value;
