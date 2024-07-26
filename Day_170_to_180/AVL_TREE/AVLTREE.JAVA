@@ -63,6 +63,20 @@ public class AVLTREE{
             return balanceFactor >= -1 && balanceFactor <=1;
         }
 
+        private boolean isLeftHeavy(AVLNODE node){
+
+            if(node == null) return false; 
+            int balenceFactor = getBalenceFactor(node);
+            return balenceFactor  > 1;
+        }
+
+        private boolean isRighttHeavy(AVLNODE node){
+
+            if(node == null) return false; 
+            int balenceFactor = getBalenceFactor(node);
+            return balenceFactor  < -1;
+        }
+
     public String toString(){
         return "Value ="+ this.value;
     }
