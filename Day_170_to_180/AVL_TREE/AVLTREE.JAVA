@@ -40,11 +40,13 @@ public class AVLTREE{
                     
                     root.left = leftRotate(root.left);
                 }
-                System.out.print(("Right Rotate: "+ root));
+                root = rightRotate(root);
             }
             else if(isRighttHeavy(root)){
                 if(getBalenceFactor(root.right) > 0){
                     System.out.print(("right Rotate: "+ root.right));
+                    root.right = rightRotate("right rotate : "+root.right);
+                    root.right = rightRotate(root.right); 
                 }
                 root=leftRotate(root);
                 System.out.print(("Left Rotate: "+ root));
