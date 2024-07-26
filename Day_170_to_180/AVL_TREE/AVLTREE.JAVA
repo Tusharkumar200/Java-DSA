@@ -37,16 +37,16 @@ public class AVLTREE{
             
             if(isLeftHeavy(root)){
                 if(getBalenceFactor(root.left) < 0){
-                    System.out.print(("Left Rotate: "+ root.left));
-                   
+                    
+                    root.left = leftRotate(root.left);
                 }
                 System.out.print(("Right Rotate: "+ root));
             }
-            else{
+            else if(isRighttHeavy(root)){
                 if(getBalenceFactor(root.right) > 0){
                     System.out.print(("right Rotate: "+ root.right));
-                   
                 }
+                root=leftRotate(root);
                 System.out.print(("Left Rotate: "+ root));
             }
         }
@@ -89,6 +89,24 @@ public class AVLTREE{
             if(node == null) return false; 
             int balenceFactor = getBalenceFactor(node);
             return balenceFactor  < -1;
+        }
+    
+
+        private AVLNode leftRotate(AVLNODE node){
+            
+            if(root == null) return null;
+            AVLNODE newRoot = root.right;
+            root.right = newRoot.left;
+            newRoot.left = root;
+            return newRoot;
+        }
+        private AVLNode rightRotate(AVLNODE node){
+            
+            if(root == null) return null;
+            AVLNODE newRoot = root.left;
+            root.left = newRoot.right;
+            newRoot.right = root;
+            return newRoot;
         }
 
     public String toString(){
