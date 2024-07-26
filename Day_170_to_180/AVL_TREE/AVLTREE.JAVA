@@ -34,7 +34,21 @@ public class AVLTREE{
         root.height = Math.max(height(node.left), height(node.right)) +1;
 
         if(!isBalanced(root)){
-            System.out.println("There is an imbalance at node" + root);
+            
+            if(isLeftHeavy(root)){
+                if(getBalenceFactor(root.left) < 0){
+                    System.out.print(("Left Rotate: "+ root.left));
+                   
+                }
+                System.out.print(("Right Rotate: "+ root));
+            }
+            else{
+                if(getBalenceFactor(root.right) > 0){
+                    System.out.print(("right Rotate: "+ root.right));
+                   
+                }
+                System.out.print(("Left Rotate: "+ root));
+            }
         }
 
         return root;
