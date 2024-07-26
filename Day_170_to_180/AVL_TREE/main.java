@@ -1,6 +1,8 @@
 
 package AVL_TREE;
 
+import AVL_TREE.AVLTREE; // Add this import statement
+
 public class Main {
 	public static void main(String args[]){
 		
