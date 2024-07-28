@@ -6,6 +6,13 @@ public class Main {
         for(int num: nums){
             maxHeap.insert(num);
         }
+        // debugg the heap at Done as breakpoint!
         System.out.println("Done.");
-    }
+
+
+        //    Heap sort
+        while(!maxHeap.isEmpty()){
+            System.out.println(maxHeap.remove());
+        }
+    }       
 }
