@@ -22,8 +22,8 @@ public class Lc_632_Smallest_Range_in_K_lists {
         Comparator<Node> compare = new Comparator<Node>(){
             public int compare(Node a, Node b){
                 return a.value - b.value;
-            }
-        }
+            };
+        };
         
         // built - int MinHeap Heap
         PriorityQueue<Node> minHeap = new PriorityQueue<Node>(compare);
