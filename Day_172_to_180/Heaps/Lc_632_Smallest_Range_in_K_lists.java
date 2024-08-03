@@ -1,3 +1,4 @@
+
 import java.util.Comparator;
 import java.util.List;
 import java.util.PriorityQueue;
@@ -52,7 +53,20 @@ public class Lc_632_Smallest_Range_in_K_lists {
                 start =  topValue;
                 end = maxi;
             }
+
+            if(top.col + 1 < nums.get(top.row).size()){
+                int newCol = top.col +1;
+                int num = nums.get(top.row).get(newCol);
+                maxi = Math.max(maxi , num);
+                minHeap.add(new Node(num , top.row , newCol));
+            }
+            else{
+                break;
+            }
         }
+        return new int[]{
+            start, end
+        };
         
     }
 }
