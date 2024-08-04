@@ -2,3 +2,22 @@
 
 introduction of tries 
 
+---------------------
+
+Definition:
+A trie (pronounced "try") is a tree data structure used for storing a dynamic set or associative array where the keys are usually strings. Each node represents a common prefix shared by some keys, and edges represent individual characters.
+
+Key Characteristics:
+Nodes and Edges: Nodes represent common prefixes; edges represent characters.
+Root Node: Represents an empty string.
+Insertion and Search: Generally O(m) time complexity, where m is the length of the key.
+Space Efficiency: Shares common prefixes, which can save space.
+Advantages:
+Efficient Search: Fast search operations compared to other trees.
+Prefix Matching: Excellent for prefix matching and autocomplete.
+Memory Efficiency: Saves space with common prefixes.
+Common Applications:
+Autocomplete: Suggests words as you type.
+Spell Checker: Efficiently checks if a word exists in a dictionary.
+IP Routing: Stores routing tables for quick longest prefix matching.
+DNA Sequencing: Stores sequences of characters.
