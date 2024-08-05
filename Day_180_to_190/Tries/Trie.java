@@ -1,14 +1,29 @@
+import java.util.HashMap;
+import java.util.Map;
 
 class TrieNode{
     public char value;
-    public TrieNode[] children;
+    private Map<Character , TrieNode> children;
     public boolean isEndOfWord;
 
     public TrieNode(char value){
     this.value = value;
-    this.children = new TrieNode[26];
+    this.children = new HashMap<>();
     this.isEndOfWord = false;
     }
+
+    public boolean hasChild(char ch){
+        return children.containsKey(ch);
+    }
+
+    public void insertChild(char ch){
+        children.put(ch,new TrieNode(ch));
+    }
+
+    public TrieNode getChild(char ch){
+        return children.get(ch);
+    }
+
 
     public String toString(){
         return "Value = "+value;
@@ -19,7 +34,7 @@ public class Trie{
     private TrieNode root;
 
     public Trie(){
-        this.root = new TrieNode(' ')
+        this.root = new TrieNode(' ');
     }
 
     public void insert(String word){
@@ -27,12 +42,12 @@ public class Trie{
 
         for(char ch: word.toCharArray()){
 
-            int index = ch - 'a';
+            
+            if(!current.hasChild(ch)){
+                current.insertChild(ch);
 
-            if(current.children[index] == null){
-                current.children[index] = new TrieNode(ch);
             }
-            current = current.children[index];
+            current = current.getChild(ch);
         }
         current.isEndOfWord = true;
     }
