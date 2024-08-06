@@ -87,4 +87,12 @@ public class Trie{
         searchForAllPossibleWords(startingPoint, prefix, result);
         return result;
     }
+
+    private void remove(TrieNode root, String word , int index){
+
+    }
+
+    public void remove(){
+        
+    }
 }
