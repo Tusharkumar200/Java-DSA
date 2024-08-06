@@ -1,4 +1,5 @@
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 class TrieNode{
@@ -50,5 +51,9 @@ public class Trie{
             current = current.getChild(ch);
         }
         current.isEndOfWord = true;
+    }
+
+    public List<String> autoComplete(String prefix){
+        
     }
 }
