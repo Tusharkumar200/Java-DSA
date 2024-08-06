@@ -30,6 +30,10 @@ class TrieNode{
         return children.values().toArray(new TrieNode[0]);
     }
 
+    public void removeChild(TrieNode node){
+        children.remove(node.value);
+    }
+
 
     public String toString(){
         return "Value = "+value;
@@ -89,10 +93,26 @@ public class Trie{
     }
 
     private void remove(TrieNode root, String word , int index){
+            if(root == null) return;
+            if(index == word.length()){
+                root.isEndOfWord = false;
+                return;
+            }
 
+            char currentChar = word.charAt(index);
+            TrieNode current = root.getChild(currentChar);
+
+            if(current == null) return;
+
+            remove(current,word,index+1);
+
+            if (current.getChildren().length == 0 && !current.isEndOfWord){
+                root.removeChild(current);
+                
+            }
     }
 
-    public void remove(){
-        
+    public void remove(String word){
+        remove(root,"car",0);
     }
 }
