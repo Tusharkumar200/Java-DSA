@@ -117,9 +117,9 @@ public class Trie{
 
 
     private void getLongestCommonPrefix(TrieNode root , StringBuilder result){
+        result.append(root.value);
         if(root.getChildren().length != 1 || root.isEndOfWord) return;
 
-        result.append(root.value);
 
         for(TrieNode child: root.getChildren()){
             getLongestCommonPrefix(child,result);

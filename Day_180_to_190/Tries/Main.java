@@ -9,6 +9,7 @@ public class Main {
         };
         trie.remove("carpool");
         System.out.println(trie.autoComplete("car"));
+        System.out.println(trie.getLongestCommonPrefix());
      
     }
 
