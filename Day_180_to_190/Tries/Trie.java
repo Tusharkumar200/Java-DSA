@@ -111,8 +111,26 @@ public class Trie{
                 
             }
     }
-
     public void remove(String word){
         remove(root,"car",0);
+    }
+
+
+    private void getLongestCommonPrefix(TrieNode root , StringBuilder result){
+        if(root.getChildren().length != 1 || root.isEndOfWord) return;
+
+        result.append(root.value);
+
+        for(TrieNode child: root.getChildren()){
+            getLongestCommonPrefix(child,result);
+        }
+        
+    }
+
+    
+    public String getLongestCommonPrefix(){
+        StringBuilder result = new StringBuilder();
+        getLongestCommonPrefix(root,result);
+        return result.toString();
     }
 }
