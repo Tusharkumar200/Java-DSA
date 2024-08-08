@@ -1,13 +1,14 @@
 package Graph.MyGraph;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-public enum GRAPH_DIRECTION{
+ enum GRAPH_DIRECTION{
 
-    "DIRECTED",
-    "UNDIRECTED",
+    DIRECTED,
+    UNDIRECTED,
 }
 
 public class Building_Graph_from_Scratch {
@@ -17,6 +18,10 @@ public class Building_Graph_from_Scratch {
         public Node(String value) {
             this.value = value;
         }
+
+        public String toString() {return this.value;}
+
+        
     }
 
     private Map<Node, List<Node>> adjacencyList;
@@ -36,7 +41,7 @@ public class Building_Graph_from_Scratch {
         return nodes.get(value);
     }
 
-    public void createConnection(Node from, Node to GRAPH_DIRECTION direction){
+    public void createConnection(Node from, Node to, GRAPH_DIRECTION direction){
         if(!adjacencyList.containsKey(from)){
             adjacencyList.put(from, new ArrayList<Node>());
         }
@@ -53,16 +58,17 @@ public class Building_Graph_from_Scratch {
         }
 
     }
+}
 
     public String toString(){
         StringBuilder sb = new StringBuilder();
 
         for(var entry: adjacencyList.entrySet()){
-            sb.append(entry.getKey()).append(" -> ").append(entry.getValue()).append("\n"));
+            sb.append(entry.getKey()).append(" -> ").append(entry.getValue()).append("\n");
         }
         return sb.toString();
     }
 
-    }
+    
 
-
+}
