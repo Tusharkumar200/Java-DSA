@@ -22,7 +22,7 @@ public class Building_Graph_from_Scratch {
         this.nodes = new HashMap<>();
     }
     
-    public Node creatNode(String value){
+    public Node createNode(String value){
 
         if(!nodes.containsKey(value))
             nodes.put(value, new Node(value));
