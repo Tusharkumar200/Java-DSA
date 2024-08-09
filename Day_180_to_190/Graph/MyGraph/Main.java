@@ -10,6 +10,7 @@ public class Main {
         var d=  graph.createNode("D");
 
         graph.createConnection(a,b, GRAPH_DIRECTION.DIRECTED);
+        graph.createConnection(a,c, GRAPH_DIRECTION.DIRECTED);
         System.out.println(graph);
     }
 }
