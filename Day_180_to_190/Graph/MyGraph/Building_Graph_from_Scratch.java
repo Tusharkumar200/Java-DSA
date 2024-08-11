@@ -64,6 +64,7 @@ public class Building_Graph_from_Scratch {
     }
 }
 
+//  BFS Traversal
     public List<Node> getBFS(Node startingNode){
         List<Node> result = new ArrayList<>();
         Queue<Node> q= new LinkedList<>();
