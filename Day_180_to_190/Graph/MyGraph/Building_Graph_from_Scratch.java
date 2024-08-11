@@ -88,10 +88,21 @@ public class Building_Graph_from_Scratch {
         return result;
     }
 
-    private
+    private void getDFSRec(Node node , Set<Node> visited , List<Node> result){
+        if(node == null || visited.contains(node))return;
+
+        result.add(node);
+        visited.add(node);
+
+        for(Node child: adjacencyList.get(node)){
+            getDFSRec(child, visited, result);
+        }
+    }
     
     public List<Node> getDFS(Node initalNode){
-
+            List<Node> result = new ArrayList<>();
+            getDFSRec(initalNode, new HashSet<>(), result);
+            return result;
     }
 
     public String toString(){
