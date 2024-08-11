@@ -2,8 +2,12 @@ package Graph.MyGraph;
 
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.HashSet;
+import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
+import java.util.Queue;
+import java.util.Set;
 
  enum GRAPH_DIRECTION{
 
@@ -61,7 +65,26 @@ public class Building_Graph_from_Scratch {
 }
 
     public List<Node> getBFS(Node startingNode){
+        List<Node> result = new ArrayList<>();
+        Queue<Node> q= new LinkedList<>();
+        Set<Node> visited = new HashSet<>();
 
+        q.offer(startingNode);
+        visited.add(startingNode);
+
+        while(!q.isEmpty()){
+            Node current = q.poll();
+            result.add(current);
+
+            for(Node child: adjacencyList.get(current)){
+                if(!visited.contains(child)){
+                    q.offer(child);
+                    visited.add(child);
+                }
+            }
+            
+        }
+        return result;
     }
 
     public String toString(){
