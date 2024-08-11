@@ -88,6 +88,12 @@ public class Building_Graph_from_Scratch {
         return result;
     }
 
+    private
+    
+    public List<Node> getDFS(Node initalNode){
+
+    }
+
     public String toString(){
         StringBuilder sb = new StringBuilder();
 
