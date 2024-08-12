@@ -104,6 +104,14 @@ public class Building_Graph_from_Scratch {
             getDFSRec(initalNode, new HashSet<>(), result);
             return result;
     }
+     
+
+    private boolean hashCycle(Node node){
+
+    }
+    public boolean hashCycle(){
+
+    }
 
     public String toString(){
         StringBuilder sb = new StringBuilder();
