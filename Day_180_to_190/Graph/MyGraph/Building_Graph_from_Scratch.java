@@ -106,11 +106,36 @@ public class Building_Graph_from_Scratch {
     }
      
 
-    private boolean hashCycle(Node node){
+    private boolean hashCycle(Node node, HashSet<Node> visiting , HashSet<Node> visited){
+        visiting.add(node);
+
+        for(Node child: adjacencyList.get(node)){
+            if(visiting.contains(child)) return true;
+            if(hashCycle(child, visiting, visited)) return true;
+        }
+
+        visiting.remove(node);
+        visited.add(node);
+
+        return false;
 
     }
     public boolean hashCycle(){
+        List<Node> all = new ArrayList<>();
+        HashSet<Node> visiting = new HashSet<>();
+        HashSet<Node> visited = new HashSet<>();
 
+        for(var entry: nodes.entrySet()){
+            all.add(entry.getValue());
+        }
+
+        for(Node n: all){
+            
+            if(!visited.contains(n)) {
+                if(hashCycle(n, visiting , visited)) return true;
+            }
+        }
+        return false;
     }
 
     public String toString(){
