@@ -8,9 +8,9 @@ public class Main {
         var b=  graph.createNode("B");
         var c=  graph.createNode("C");
         var d=  graph.createNode("D");
-        var e=  graph.createNode("E");
-        var f=  graph.createNode("F");
-        var g=  graph.createNode("G");
+        // var e=  graph.createNode("E");
+        // var f=  graph.createNode("F");
+        // var g=  graph.createNode("G");
 
         // graph.createConnection(a,b, GRAPH_DIRECTION.DIRECTED);
         // graph.createConnection(a,c, GRAPH_DIRECTION.DIRECTED);
@@ -21,17 +21,17 @@ public class Main {
         // graph.createConnection(d,g, GRAPH_DIRECTION.DIRECTED);
         // graph.createConnection(f,g, GRAPH_DIRECTION.DIRECTED);
 
-        graph.createConnection(a,b,GRAPH_DIRECTION.DIRECTED);
-        graph.createConnection(b,c,GRAPH_DIRECTION.DIRECTED);
-        graph.createConnection(c,a,GRAPH_DIRECTION.DIRECTED);
-        graph.createConnection(d,a,GRAPH_DIRECTION.DIRECTED);
+        graph.createConnection(a,b, GRAPH_DIRECTION.DIRECTED);
+        graph.createConnection(b,c, GRAPH_DIRECTION.DIRECTED);
+        graph.createConnection(c,d, GRAPH_DIRECTION.DIRECTED);
+        // graph.createConnection(d,a, GRAPH_DIRECTION.DIRECTED);
 
         System.out.println(graph);
         // System.out.println("BFS" + graph.getBFS(a));
         // System.out.println("DFS" + graph.getDFS(a));
 
-        System.out.println("BFS" + graph.getBFS(a));
-        System.out.println("hash cycle" +graph.hashCycle());
+        // System.out.println("BFS" + graph.getBFS(a));
+        System.out.println(graph.hashCycle());
 
         
     }

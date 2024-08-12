@@ -109,6 +109,7 @@ public class Building_Graph_from_Scratch {
     private boolean hashCycle(Node node, HashSet<Node> visiting , HashSet<Node> visited){
         visiting.add(node);
 
+        if(adjacencyList.contains(child)) return;
         for(Node child: adjacencyList.get(node)){
             if(visiting.contains(child)) return true;
             if(hashCycle(child, visiting, visited)) return true;
