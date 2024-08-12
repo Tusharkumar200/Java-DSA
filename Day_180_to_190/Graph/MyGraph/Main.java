@@ -24,7 +24,7 @@ public class Main {
         graph.createConnection(a,b, GRAPH_DIRECTION.DIRECTED);
         graph.createConnection(b,c, GRAPH_DIRECTION.DIRECTED);
         graph.createConnection(c,d, GRAPH_DIRECTION.DIRECTED);
-        // graph.createConnection(d,a, GRAPH_DIRECTION.DIRECTED);
+        graph.createConnection(d,a, GRAPH_DIRECTION.DIRECTED);
 
         System.out.println(graph);
         // System.out.println("BFS" + graph.getBFS(a));
