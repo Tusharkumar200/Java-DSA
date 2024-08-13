@@ -6,7 +6,7 @@ import java.util.Set;
 import java.util.Stack;
 
 public class GFG_Topologicle_Sort {
-    static void solve(Integer node , Set<Integer> visited , Stack <Integer> stack){
+    static void solve(Integer node , Set<Integer> visited , Stack <Integer> stack, ArrayList<ArrayList<Integer>> adj){
         if(visited.contains(node)){
             return;
         }
@@ -15,17 +15,17 @@ public class GFG_Topologicle_Sort {
             solve(child,visited,stack,adj);
             
         }
-
         stack.push(node);
+
 
     }
 
-    static int[] topoSort(int v, ArrayList<ArrayList<Integer>> adj) {
+    static int[] topoSort(int V, ArrayList<ArrayList<Integer>> adj) {
         Set<Integer> visited = new HashSet<>();
         Stack <Integer> stack = new Stack<>();
-        int [] ans = new int[v];
+        int [] ans = new int[V];
 
-        for(int i = 0 ; i < v ; i++){
+        for(int i = 0 ; i < V ; i++){
             if(!visited.contains(i)){
                 solve(i,visited,stack,adj);
             }
