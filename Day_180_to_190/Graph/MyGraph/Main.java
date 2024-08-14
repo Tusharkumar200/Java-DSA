@@ -31,7 +31,7 @@ public class Main {
         // System.out.println("DFS" + graph.getDFS(a));
 
         // System.out.println("BFS" + graph.getBFS(a));
-        System.out.println(graph.hashCycle());
+        // System.out.println(graph.hashCycle());
 
         
     }

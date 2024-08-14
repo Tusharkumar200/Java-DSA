@@ -144,7 +144,7 @@ public class Building_Graph_from_Scratch {
         StringBuilder sb = new StringBuilder();
 
         for(var entry: nodes.entrySet()){
-            sb.append(entry.getKey()).append(("--> ")).append(entry.getValue().getChildren()).append("/n");
+            sb.append(entry.getKey()).append(("--> ")).append(entry.getValue().getChildren()).append("\n");
         }
         return sb.toString();
     }
