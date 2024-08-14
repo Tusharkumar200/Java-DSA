@@ -19,8 +19,20 @@ public class Building_Graph_from_Scratch {
     class Node {
         public String value;
 
+        private List<Node> edges;
+
         public Node(String value) {
             this.value = value;
+            this.edges = new ArrayList<>();
+        }
+
+        public void addEdge(Node node){
+            if(this.edges.contains(node)) return;
+            this.edges.add(node);
+        }
+
+        public List<Node> getChildren(){
+            return this.edges;
         }
 
         public String toString() {return this.value;}
@@ -28,12 +40,10 @@ public class Building_Graph_from_Scratch {
         
     }
 
-    private Map<Node, List<Node>> adjacencyList;
-
+    
     private Map<String, Node> nodes;
 
     public Building_Graph_from_Scratch() {
-        this.adjacencyList = new HashMap<Node, List<Node>>();
         this.nodes = new HashMap<>();
     }
 
@@ -46,23 +56,14 @@ public class Building_Graph_from_Scratch {
     }
 
     public void createConnection(Node from, Node to, GRAPH_DIRECTION direction){
-        if(!adjacencyList.containsKey(from)){
-            adjacencyList.put(from, new ArrayList<Node>());
-        }
-
-        if (!adjacencyList.containsKey(to)){
-            adjacencyList.put(to, new ArrayList<Node>());{
-            
-        }
-
-        adjacencyList.get(from).add(to);
-
+        from.addEdge(to);
         if(direction == GRAPH_DIRECTION.UNDIRECTED){
-            adjacencyList.get(to).add(from);
+            to.addEdge(from);
         }
+
 
     }
-}
+
 
 //  BFS Traversal
     public List<Node> getBFS(Node startingNode){
@@ -77,7 +78,7 @@ public class Building_Graph_from_Scratch {
             Node current = q.poll();
             result.add(current);
 
-            for(Node child: adjacencyList.get(current)){
+            for(Node child: current.getChildren()){
                 if(!visited.contains(child)){
                     q.offer(child);
                     visited.add(child);
@@ -94,7 +95,7 @@ public class Building_Graph_from_Scratch {
         result.add(node);
         visited.add(node);
 
-        for(Node child: adjacencyList.get(node)){
+        for(Node child: node.getChildren()){
             getDFSRec(child, visited, result);
         }
     }
@@ -109,12 +110,12 @@ public class Building_Graph_from_Scratch {
     private boolean hashCycle(Node node, HashSet<Node> visiting , HashSet<Node> visited){
         visiting.add(node);
 
-        if(adjacencyList.containsKey(node)){
-        for(Node child: adjacencyList.get(node)){
+        
+        for(Node child:node.getChildren()){
             if(visiting.contains(child)) return true;
             if(hashCycle(child, visiting, visited)) return true;
         }
-      }
+      
         visiting.remove(node);
         visited.add(node);
 
@@ -142,8 +143,8 @@ public class Building_Graph_from_Scratch {
     public String toString(){
         StringBuilder sb = new StringBuilder();
 
-        for(var entry: adjacencyList.entrySet()){
-            sb.append(entry.getKey()).append(" -> ").append(entry.getValue()).append("\n");
+        for(var entry: nodes.entrySet()){
+            sb.append(entry.getKey()).append(("--> ")).append(entry.getValue().getChildren()).append("/n");
         }
         return sb.toString();
     }
