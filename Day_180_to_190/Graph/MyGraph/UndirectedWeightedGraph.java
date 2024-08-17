@@ -48,4 +48,16 @@ public Node createNode(String label){
     nodes.putIfAbsent(label , new Node(label));
     return nodes.get(label);
 }   
+
+public String toString(){
+    StringBuilder sb = new StringBuilder();
+
+    for(var entry: nodes.entrySet()){
+        sb.append(entry.getValue().toString().concat("-- "));
+        for (var child :entry.getValue().edges()) {
+            sb.append(child.weight).append(" --> ").append(child.to).append("\n");
+        }
+    }
+    return sb.toString();
+}
 }
