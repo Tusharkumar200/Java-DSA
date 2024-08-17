@@ -1,6 +1,10 @@
 
 
-class Node{
+public class UndirectedWeightedGraph{
+
+    
+
+public class Node{
     public String label;
 
     private List<WeightedEdge> edges;
@@ -9,12 +13,39 @@ class Node{
         this.label = label;
         this.edges = new ArrayList<WeightedEdge>();
     }
+
+    public void addEdge(Node to , int weight){
+        this.edges.add(new WeightedEdge(to, weight));
+        to.edges.add(new WeightedEdge(this, weight));
+    }
+
+    public String toString(){
+        return this.label;
+    }
 }
 
-class WeightedEdge{
-    
+private class WeightedEdge{
+    public Node to;
+    public int weight;
+
+    public WeightedEdge(Node to , int weight){
+        this.weight = weight;
+        this.to = to;
+    }
+
+    public String toString(){
+        return "{Node=" + to + ", Weight= "+ this.weight + "}";
+    }
 }
 
-public class UndirectedWeightedGraph{
+public Map<String, Node> node;
 
+public UndirectedWeightedGraph(){
+    this.nodes = new HashMap<>();
+}
+
+public Node createNode(String label){
+    nodes.putIfAbsent(label , new Node(label));
+    return nodes.get(label);
+}   
 }
