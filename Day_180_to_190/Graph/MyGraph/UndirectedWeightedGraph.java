@@ -13,7 +13,7 @@ public class Node{
 
     private List<WeightedEdge> edges;
 
-    public Nodes(String label){
+    public Node(String label){
         this.label = label;
         this.edges = new ArrayList<WeightedEdge>();
     }
@@ -45,34 +45,35 @@ private class WeightedEdge{
 public Map<String, Node> node;
 
 public UndirectedWeightedGraph(){
-    this.nodes = new HashMap<>();
+    this.node = new HashMap<>();
 }
 
 public Node createNode(String label){
-    nodes.putIfAbsent(label , new Node(label));
-    return nodes.get(label);
+    node.putIfAbsent(label , new Node(label));
+    return node.get(label);
 }   
 
 private boolean hasCycle(Node node  , Node parent , Set<Node> visited){
     
-    if(parent == null || visited.contains(node)) return false;
-    
+    if( visited.contains(node)) return false;
+    visited.add(node);
     for(var child: node.edges){
         if(child.to == parent) continue;
         if(visited.contains(child.to) || hasCycle(child.to , node , visited)) return true;
     }
 
-    visited.add(node);
+    
     return false;
 }
 
 public boolean hasCycle(){
-    for(var node: nodes.values()){
+    for(var node: node.values()){
         if(hasCycle(node , null, new HashSet<>())) return true;
 
     }
     return false;
 }
+
 
 public String toString(){
     StringBuilder sb = new StringBuilder();
