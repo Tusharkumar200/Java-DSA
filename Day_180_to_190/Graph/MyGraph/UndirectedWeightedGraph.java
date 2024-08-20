@@ -66,7 +66,15 @@ public Node createNode(String label){
 
 public void dijkstrasAlgorithm(Node initialNode){
     Set<Node> visited = new HashSet<>();
-    
+    Map<Node , EdgeEntry > map = new HashMap<>();
+
+    PriorityQueue<EdgeEntry> q = new PriorityQueue<>(new Comparator<EdgeEntry>(){
+        @override
+        public int compare(EdgeEntry 01 , EdgeEntry 02){
+            return 01.weight - 02.weight;
+        }
+    });
+
 }
 
 private boolean hasCycle(Node node  , Node parent , Set<Node> visited){
