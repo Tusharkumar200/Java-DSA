@@ -72,7 +72,7 @@ public String dijkstrasAlgorithm(Node initialNode , Node toNode){
     PriorityQueue<EdgeEntry> q = new PriorityQueue<>(new Comparator<EdgeEntry>(){
         @override
         public int compare(EdgeEntry 01 , EdgeEntry 02){
-            return 01.weight - 02.weight;
+            return o1.weight - o2.weight;
         }
     });
 
@@ -87,7 +87,7 @@ public String dijkstrasAlgorithm(Node initialNode , Node toNode){
         for(var child: top.node.edges){
             int newDistance = top.weight + child.weight;
 
-            if(newDistance < map.get(child.to).weight){
+            if(map.containsKey(child.to) || newDistance < map.get(child.to).weight){
                 var newEntry = new EdgeEntry(child.to , newDistance , top.node);
                 map.put(child.to, newEntry);
                 q.offer(newEntry);
@@ -103,7 +103,7 @@ public String dijkstrasAlgorithm(Node initialNode , Node toNode){
         tempEntry = map.get(tempEntry.parent);
     }
 
-    return sb.toString();
+    return sb.reverse().append(" = ").append(map.get(toNode).weight).toString();
 
 }
 
