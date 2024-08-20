@@ -2,6 +2,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.PriorityQueue;
 import java.util.Set;
 
 public class UndirectedWeightedGraph{
@@ -64,7 +65,7 @@ public Node createNode(String label){
 }   
 
 
-public void dijkstrasAlgorithm(Node initialNode){
+public String dijkstrasAlgorithm(Node initialNode , Node toNode){
     Set<Node> visited = new HashSet<>();
     Map<Node , EdgeEntry > map = new HashMap<>();
 
@@ -74,6 +75,35 @@ public void dijkstrasAlgorithm(Node initialNode){
             return 01.weight - 02.weight;
         }
     });
+
+    var entry = new EdgeEntry(initialNode, 0, null);
+    map.put(initialNode, entry);
+    q.offer(entry);
+
+    while(!q.isEmpty()){
+        var top = q.poll();
+        if(visited.contains(top.node)) continue;
+
+        for(var child: top.node.edges){
+            int newDistance = top.weight + child.weight;
+
+            if(newDistance < map.get(child.to).weight){
+                var newEntry = new EdgeEntry(child.to , newDistance , top.node);
+                map.put(child.to, newEntry);
+                q.offer(newEntry);
+            }
+        }
+        visited.add((top.node));
+    }
+    StringBuilder sb = new StringBuilder();
+    var tempEntry = map.get(toNode);
+
+    while(tempEntry !=null){
+        sb.append(tempEntry.node).append(" ");
+        tempEntry = map.get(tempEntry.parent);
+    }
+
+    return sb.toString();
 
 }
 
