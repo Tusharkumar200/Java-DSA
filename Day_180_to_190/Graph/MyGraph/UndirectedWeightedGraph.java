@@ -6,7 +6,17 @@ import java.util.Set;
 
 public class UndirectedWeightedGraph{
 
-    
+private class EdgeEntry{
+    public Node node;
+    public int weight;
+    public Node parent;
+
+    public EdgeEntry(Node node ,int weight , Node parent){
+        this.node = node;
+        this.weight = weight;
+        this.parent = parent;
+    }
+}
 
 public class Node{
     public String label;
@@ -52,6 +62,12 @@ public Node createNode(String label){
     node.putIfAbsent(label , new Node(label));
     return node.get(label);
 }   
+
+
+public void dijkstrasAlgorithm(Node initialNode){
+    Set<Node> visited = new HashSet<>();
+    
+}
 
 private boolean hasCycle(Node node  , Node parent , Set<Node> visited){
     
