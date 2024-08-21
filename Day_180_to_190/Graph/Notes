@@ -6,3 +6,24 @@ Minimum Spanning Tree:
 -->  A spanning tree can be defined as the subgraph of an undirected connected graph. It includes all the vertices along with the least possible number of edges. 
 
 A spanning tree consists of (n-1) edges, where 'n' is the number of vertices (or nodes). Edges of the spanning tree may or may not have weights assigned to them. 
+
+Prim's Algorithm:
+
+The MST found by Prim's algorithm is the collection of edges in a graph, that connects all vertices, with a minimum sum of edge weights.
+
+Prim's algorithm finds the MST by first including a random vertex to the MST. The algorithm then finds the vertex with the lowest edge weight from the current MST, and includes that to the MST. Prim's algorithm keeps doing this until all nodes are included in the MST.
+
+Prim's algorithm is greedy, and has a straightforward way to create a minimum spanning tree.
+
+For Prim's algorithm to work, all the nodes must be connected. To find the MST's in an unconnected graph, Kruskal's algorithm can be used instead. You can read about Kruskal's algorithm on the next page.
+
+How does Prim’s Algorithm Work? 
+The working of Prim’s algorithm can be described by using the following steps:
+
+Step 1: Determine an arbitrary vertex as the starting vertex of the MST.
+Step 2: Follow steps 3 to 5 till there are vertices that are not included in the MST (known as fringe vertex).
+Step 3: Find edges connecting any tree vertex with the fringe vertices.
+Step 4: Find the minimum among these edges.
+Step 5: Add the chosen edge to the MST if it does not form any cycle.
+Step 6: Return the MST and exit
+
