@@ -86,11 +86,11 @@ public UndirectedWeightedGraph getMinimumSpanningTree(Node initialNode){
 
         if(tree.nodes.containsKey(nextNode.label)) continue;
 
-        Node node = tree.createNode(currentEdge.from.label);
+        tree.createNode(nextNode.label);
 
-        node.addEdge(nextNode,currentEdge.weight);
+        tree.nodes.get(currentEdge.from.label).addEdge(nextNode, currentEdge.weight);
 
-        for(var edge: node.edges)
+        for(var edge: nextNode.edges)
             if(!tree.nodes.containsKey(edge.to.label))
                     q.offer(edge);
 
