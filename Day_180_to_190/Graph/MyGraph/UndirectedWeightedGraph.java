@@ -30,8 +30,8 @@ public class Node{
     }
 
     public void addEdge(Node to , int weight){
-        this.edges.add(new WeightedEdge(to, weight));
-        to.edges.add(new WeightedEdge(this, weight));
+        this.edges.add(new WeightedEdge(this, weight, to));
+        to.edges.add(new WeightedEdge(to, weight, this));
     }
 
     public String toString(){
@@ -41,10 +41,12 @@ public class Node{
 
 private class WeightedEdge{
     public Node to;
+    public Node from;
     public int weight;
 
-    public WeightedEdge(Node to , int weight){
+    public WeightedEdge(Node from , int weight , Node to){
         this.weight = weight;
+        this.from = from;
         this.to = to;
     }
 
@@ -64,6 +66,9 @@ public Node createNode(String label){
     return node.get(label);
 }   
 
+public UndirectedWeightedGraph getMinimumSpanningTree(Node initialNode){
+    
+}
 
 public String dijkstrasAlgorithm(Node initialNode , Node toNode){
     Set<Node> visited = new HashSet<>();
