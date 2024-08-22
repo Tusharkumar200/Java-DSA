@@ -1,5 +1,7 @@
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.HashMap;
+import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.PriorityQueue;
@@ -66,8 +68,35 @@ public Node createNode(String label){
     return node.get(label);
 }   
 
+// Prim's Algorithm Code
+
 public UndirectedWeightedGraph getMinimumSpanningTree(Node initialNode){
+
+    UndirectedWeightedGraph tree = new UndirectedWeightedGraph();
+    PriorityQueue<WeightedEdge> q = new PriorityQueue<>(Comparator.comparing(e -> e.weight));
+
+    tree.createNode(initialNode.label);
+
+    for(var edge: initialNode.edges)
+        q.offer(edge);
     
+    while(tree.nodes.size() < nodes.size()){
+        WeightedEdge currentEdge = q.poll();
+        Node nextNode = currentEdge.to;
+
+        if(tree.nodes.containsKey(nextNode.label)) continue;
+
+        Node node = tree.createNode(currentEdge.from.label);
+
+        node.addEdge(nextNode,currentEdge.weight);
+
+        for(var edge: node.edges)
+            if(!tree.nodes.containsKey(edge.to.label))
+                    q.offer(edge);
+
+
+    }
+    return tree;
 }
 
 public String dijkstrasAlgorithm(Node initialNode , Node toNode){
