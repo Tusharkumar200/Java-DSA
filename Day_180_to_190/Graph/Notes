@@ -27,3 +27,5 @@ Step 4: Find the minimum among these edges.
 Step 5: Add the chosen edge to the MST if it does not form any cycle.
 Step 6: Return the MST and exit
 
+Implementation of Prims Algorithm.
+
