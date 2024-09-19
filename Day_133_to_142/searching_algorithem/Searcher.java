@@ -61,7 +61,7 @@ public static int RecursiveBinarySearch(int[] arr, int val, int start , int end)
                 currentIndex = arr.length -1;
 
             }
-            return binarySearch(arr, val ,currentIndex /2,currentIndex)
+            return binarySearch(arr, val ,currentIndex /2,currentIndex);
         }
     }
 }
